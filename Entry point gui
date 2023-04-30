@@ -1,51 +1,178 @@
--- VERSION 1.0 --
+-- version 1.1
+-- ESP SUPPORT: SET TO TRUE IF YOU WANT ESP
+
+
+
+
+
+
+-- not added yet
+
+
+
+
+
+
+
+
+
+--
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextButton = Instance.new("TextButton")
+local EPGUI = Instance.new("ScreenGui")
+local BlacksiteFrame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
+local ControlRoom = Instance.new("TextButton")
+local CLOSE = Instance.new("TextButton")
+local CargoCamera = Instance.new("TextButton")
+local Sewers = Instance.new("TextButton")
+local MainGUI = Instance.new("ImageLabel")
+local Blacksite = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+EPGUI.Name = "EPGUI"
+EPGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BackgroundTransparency = 1.000
-Frame.Position = UDim2.new(0.0779876933, 0, 0.139266312, 0)
-Frame.Size = UDim2.new(0, 232, 0, 158)
+BlacksiteFrame.Name = "BlacksiteFrame"
+BlacksiteFrame.Parent = EPGUI
+BlacksiteFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BlacksiteFrame.BackgroundTransparency = 1.000
+BlacksiteFrame.Position = UDim2.new(0.744727552, 0, 0.191915765, 0)
+BlacksiteFrame.Size = UDim2.new(0, 232, 0, 386)
+BlacksiteFrame.Visible = false
+BlacksiteFrame.ZIndex = 100
 
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.BackgroundTransparency = 1.000
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.056034483, 0, 0.310126573, 0)
-TextButton.Size = UDim2.new(0, 200, 0, 50)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Control room (BEHIND GUARD)"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-
-TextLabel.Parent = Frame
+TextLabel.Parent = BlacksiteFrame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0.056034483, 0, -0.00632911408, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 39)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Blacksite"
+TextLabel.Text = "Blacksite (TPS)"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
+ControlRoom.Name = "Control Room"
+ControlRoom.Parent = BlacksiteFrame
+ControlRoom.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ControlRoom.BackgroundTransparency = 1.000
+ControlRoom.BorderSizePixel = 0
+ControlRoom.Position = UDim2.new(0.056034483, 0, 0.128779426, 0)
+ControlRoom.Size = UDim2.new(0, 200, 0, 50)
+ControlRoom.Font = Enum.Font.SourceSans
+ControlRoom.Text = "Control room (BEHIND GUARD)"
+ControlRoom.TextColor3 = Color3.fromRGB(0, 0, 0)
+ControlRoom.TextScaled = true
+ControlRoom.TextSize = 14.000
+ControlRoom.TextWrapped = true
+
+CLOSE.Name = "CLOSE"
+CLOSE.Parent = BlacksiteFrame
+CLOSE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CLOSE.BackgroundTransparency = 1.000
+CLOSE.Position = UDim2.new(0.056034483, 0, -0.137305707, 0)
+CLOSE.Size = UDim2.new(0, 200, 0, 50)
+CLOSE.Font = Enum.Font.SourceSans
+CLOSE.Text = "Close"
+CLOSE.TextColor3 = Color3.fromRGB(255, 0, 0)
+CLOSE.TextScaled = true
+CLOSE.TextSize = 14.000
+CLOSE.TextWrapped = true
+
+CargoCamera.Name = "Cargo Camera"
+CargoCamera.Parent = BlacksiteFrame
+CargoCamera.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CargoCamera.BackgroundTransparency = 1.000
+CargoCamera.BorderSizePixel = 0
+CargoCamera.Position = UDim2.new(0.056034483, 0, 0.279038489, 0)
+CargoCamera.Size = UDim2.new(0, 200, 0, 50)
+CargoCamera.Font = Enum.Font.SourceSans
+CargoCamera.Text = "Cargo Cameras"
+CargoCamera.TextColor3 = Color3.fromRGB(0, 0, 0)
+CargoCamera.TextScaled = true
+CargoCamera.TextSize = 14.000
+CargoCamera.TextWrapped = true
+
+Sewers.Name = "Sewers"
+Sewers.Parent = BlacksiteFrame
+Sewers.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sewers.BackgroundTransparency = 1.000
+Sewers.BorderSizePixel = 0
+Sewers.Position = UDim2.new(0.056034483, 0, 0.408572167, 0)
+Sewers.Size = UDim2.new(0, 200, 0, 50)
+Sewers.Font = Enum.Font.SourceSans
+Sewers.Text = "Sewers"
+Sewers.TextColor3 = Color3.fromRGB(0, 0, 0)
+Sewers.TextScaled = true
+Sewers.TextSize = 14.000
+Sewers.TextWrapped = true
+
+MainGUI.Name = "MainGUI"
+MainGUI.Parent = EPGUI
+MainGUI.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+MainGUI.BackgroundTransparency = 1.000
+MainGUI.Position = UDim2.new(0.0296572931, 0, 0.0917119607, 0)
+MainGUI.Size = UDim2.new(0, 364, 0, 159)
+MainGUI.Image = "rbxassetid://3570695787"
+MainGUI.ImageColor3 = Color3.fromRGB(72, 72, 72)
+MainGUI.ImageTransparency = 0.450
+MainGUI.ScaleType = Enum.ScaleType.Slice
+MainGUI.SliceCenter = Rect.new(100, 100, 100, 100)
+MainGUI.SliceScale = 0.250
+
+Blacksite.Name = "Blacksite"
+Blacksite.Parent = MainGUI
+Blacksite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Blacksite.BackgroundTransparency = 1.000
+Blacksite.BorderSizePixel = 0
+Blacksite.Position = UDim2.new(0.0192307699, 0, 0.144654095, 0)
+Blacksite.Size = UDim2.new(0, 200, 0, 50)
+Blacksite.ZIndex = 99
+Blacksite.Font = Enum.Font.SourceSans
+Blacksite.Text = "Blacksite"
+Blacksite.TextColor3 = Color3.fromRGB(0, 0, 0)
+Blacksite.TextSize = 14.000
+
+TextButton.Parent = MainGUI
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.598901093, 0, 0.144654095, 0)
+TextButton.Size = UDim2.new(0, 138, 0, 50)
+TextButton.ZIndex = 99
+TextButton.Font = Enum.Font.SourceSans
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+TextButton_2.Parent = MainGUI
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.428571433, 0, 0.509433925, 0)
+TextButton_2.Size = UDim2.new(0, 200, 0, 50)
+TextButton_2.ZIndex = 99
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
+
+TextButton_3.Parent = MainGUI
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0.0192307699, 0, 0.509433985, 0)
+TextButton_3.Size = UDim2.new(0, 140, 0, 50)
+TextButton_3.ZIndex = 99
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextSize = 14.000
+
 -- Scripts:
 
-local function KPRXIPW_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
+local function BTMKQ_fake_script() -- ControlRoom.LocalScript 
+	local script = Instance.new('LocalScript', ControlRoom)
 
 	
 	script.Parent.Activated:Connect(function()
@@ -57,4 +184,50 @@ local function KPRXIPW_fake_script() -- TextButton.LocalScript
 	
 	
 end
-coroutine.wrap(KPRXIPW_fake_script)()
+coroutine.wrap(BTMKQ_fake_script)()
+local function AOEGLL_fake_script() -- CLOSE.LocalScript 
+	local script = Instance.new('LocalScript', CLOSE)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.MainGUI.Visible = true
+	end)
+end
+coroutine.wrap(AOEGLL_fake_script)()
+local function LAPKUA_fake_script() -- CargoCamera.LocalScript 
+	local script = Instance.new('LocalScript', CargoCamera)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(136.093, 18.45, 68.77)
+	end)
+		
+	
+	
+end
+coroutine.wrap(LAPKUA_fake_script)()
+local function SPEPD_fake_script() -- Sewers.LocalScript 
+	local script = Instance.new('LocalScript', Sewers)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(59.06, 18.1, 99.46)
+	end)
+		
+	
+	
+end
+coroutine.wrap(SPEPD_fake_script)()
+local function XAJT_fake_script() -- Blacksite.LocalScript 
+	local script = Instance.new('LocalScript', Blacksite)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.BlacksiteFrame.Visible = true
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(XAJT_fake_script)()
