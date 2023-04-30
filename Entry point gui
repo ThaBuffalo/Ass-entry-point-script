@@ -1,22 +1,6 @@
--- version 1.1
--- ESP SUPPORT: SET TO TRUE IF YOU WANT ESP
+-- Gui to Lua
+-- Version: 3.2
 
-
-
-
-
-
--- not added yet
-
-
-
-
-
-
-
-
-
---
 -- Instances:
 
 local EPGUI = Instance.new("ScreenGui")
@@ -26,7 +10,7 @@ local ControlRoom = Instance.new("TextButton")
 local CLOSE = Instance.new("TextButton")
 local CargoCamera = Instance.new("TextButton")
 local Sewers = Instance.new("TextButton")
-local MainGUI = Instance.new("ImageLabel")
+local MainGUI = Instance.new("Frame")
 local Blacksite = Instance.new("TextButton")
 local TextButton = Instance.new("TextButton")
 local TextButton_2 = Instance.new("TextButton")
@@ -36,6 +20,7 @@ local TextButton_3 = Instance.new("TextButton")
 
 EPGUI.Name = "EPGUI"
 EPGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+EPGUI.ResetOnSpawn = false
 
 BlacksiteFrame.Name = "BlacksiteFrame"
 BlacksiteFrame.Parent = EPGUI
@@ -115,21 +100,15 @@ Sewers.TextWrapped = true
 
 MainGUI.Name = "MainGUI"
 MainGUI.Parent = EPGUI
-MainGUI.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+MainGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MainGUI.BackgroundTransparency = 1.000
-MainGUI.Position = UDim2.new(0.0296572931, 0, 0.0917119607, 0)
-MainGUI.Size = UDim2.new(0, 364, 0, 159)
-MainGUI.Image = "rbxassetid://3570695787"
-MainGUI.ImageColor3 = Color3.fromRGB(72, 72, 72)
-MainGUI.ImageTransparency = 0.450
-MainGUI.ScaleType = Enum.ScaleType.Slice
-MainGUI.SliceCenter = Rect.new(100, 100, 100, 100)
-MainGUI.SliceScale = 0.250
+MainGUI.Position = UDim2.new(0, 0, 0.42629078, 0)
+MainGUI.Size = UDim2.new(0, 357, 0, 147)
 
 Blacksite.Name = "Blacksite"
 Blacksite.Parent = MainGUI
 Blacksite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Blacksite.BackgroundTransparency = 1.000
+Blacksite.BackgroundTransparency = 0.750
 Blacksite.BorderSizePixel = 0
 Blacksite.Position = UDim2.new(0.0192307699, 0, 0.144654095, 0)
 Blacksite.Size = UDim2.new(0, 200, 0, 50)
@@ -171,7 +150,7 @@ TextButton_3.TextSize = 14.000
 
 -- Scripts:
 
-local function BTMKQ_fake_script() -- ControlRoom.LocalScript 
+local function MOALAZI_fake_script() -- ControlRoom.LocalScript 
 	local script = Instance.new('LocalScript', ControlRoom)
 
 	
@@ -184,8 +163,8 @@ local function BTMKQ_fake_script() -- ControlRoom.LocalScript
 	
 	
 end
-coroutine.wrap(BTMKQ_fake_script)()
-local function AOEGLL_fake_script() -- CLOSE.LocalScript 
+coroutine.wrap(MOALAZI_fake_script)()
+local function HMNQ_fake_script() -- CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE)
 
 	script.Parent.Activated:Connect(function()
@@ -193,8 +172,8 @@ local function AOEGLL_fake_script() -- CLOSE.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(AOEGLL_fake_script)()
-local function LAPKUA_fake_script() -- CargoCamera.LocalScript 
+coroutine.wrap(HMNQ_fake_script)()
+local function FDMW_fake_script() -- CargoCamera.LocalScript 
 	local script = Instance.new('LocalScript', CargoCamera)
 
 	
@@ -207,8 +186,8 @@ local function LAPKUA_fake_script() -- CargoCamera.LocalScript
 	
 	
 end
-coroutine.wrap(LAPKUA_fake_script)()
-local function SPEPD_fake_script() -- Sewers.LocalScript 
+coroutine.wrap(FDMW_fake_script)()
+local function NYGGGA_fake_script() -- Sewers.LocalScript 
 	local script = Instance.new('LocalScript', Sewers)
 
 	
@@ -221,8 +200,8 @@ local function SPEPD_fake_script() -- Sewers.LocalScript
 	
 	
 end
-coroutine.wrap(SPEPD_fake_script)()
-local function XAJT_fake_script() -- Blacksite.LocalScript 
+coroutine.wrap(NYGGGA_fake_script)()
+local function KSSWI_fake_script() -- Blacksite.LocalScript 
 	local script = Instance.new('LocalScript', Blacksite)
 
 	script.Parent.Activated:Connect(function()
@@ -230,4 +209,4 @@ local function XAJT_fake_script() -- Blacksite.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(XAJT_fake_script)()
+coroutine.wrap(KSSWI_fake_script)()
