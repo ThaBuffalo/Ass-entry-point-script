@@ -1,4 +1,4 @@
--- Version: 2.0
+-- Version: 2.1 
 local ESP = false -- set true for esp
 
 -- Esp credit goes to some script kiddy i found on the internet 
@@ -39,8 +39,8 @@ local Sewers = Instance.new("TextButton")
 local MainGUI = Instance.new("Frame")
 local Blacksite = Instance.new("TextButton")
 local Deposit = Instance.new("TextButton")
-local TextButton = Instance.new("TextButton")
-local Financer = Instance.new("TextButton")
+local LakeHouse = Instance.new("TextButton")
+local Withdrawal = Instance.new("TextButton")
 local DepositFrame = Instance.new("Frame")
 local TextLabel_2 = Instance.new("TextLabel")
 local DownStairsCameras = Instance.new("TextButton")
@@ -59,6 +59,13 @@ local Vault = Instance.new("TextButton")
 local Cams = Instance.new("TextButton")
 local Vdoor2 = Instance.new("TextButton")
 local RandomRoom = Instance.new("TextButton")
+local LakeHouseFrame = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local CLOSE_4 = Instance.new("TextButton")
+local Powerbox = Instance.new("TextButton")
+local Basementdoor1 = Instance.new("TextButton")
+local Basementdoor2 = Instance.new("TextButton")
+local CamRoom = Instance.new("TextButton")
 
 --Properties:
 
@@ -80,7 +87,7 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0.056034483, 0, -0.00632911408, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 39)
-TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Font = Enum.Font.SciFi
 TextLabel.Text = "Blacksite (TPS)"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextScaled = true
@@ -94,7 +101,7 @@ ControlRoom.BackgroundTransparency = 1.000
 ControlRoom.BorderSizePixel = 0
 ControlRoom.Position = UDim2.new(0.056034483, 0, 0.128779426, 0)
 ControlRoom.Size = UDim2.new(0, 200, 0, 50)
-ControlRoom.Font = Enum.Font.SourceSans
+ControlRoom.Font = Enum.Font.SciFi
 ControlRoom.Text = "Control room (BEHIND GUARD)"
 ControlRoom.TextColor3 = Color3.fromRGB(0, 0, 0)
 ControlRoom.TextScaled = true
@@ -107,7 +114,7 @@ CLOSE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CLOSE.BackgroundTransparency = 1.000
 CLOSE.Position = UDim2.new(0.056034483, 0, -0.137305707, 0)
 CLOSE.Size = UDim2.new(0, 200, 0, 50)
-CLOSE.Font = Enum.Font.SourceSans
+CLOSE.Font = Enum.Font.SciFi
 CLOSE.Text = "Close"
 CLOSE.TextColor3 = Color3.fromRGB(255, 0, 0)
 CLOSE.TextScaled = true
@@ -121,7 +128,7 @@ CargoCamera.BackgroundTransparency = 1.000
 CargoCamera.BorderSizePixel = 0
 CargoCamera.Position = UDim2.new(0.056034483, 0, 0.279038489, 0)
 CargoCamera.Size = UDim2.new(0, 200, 0, 50)
-CargoCamera.Font = Enum.Font.SourceSans
+CargoCamera.Font = Enum.Font.SciFi
 CargoCamera.Text = "Cargo Cameras"
 CargoCamera.TextColor3 = Color3.fromRGB(0, 0, 0)
 CargoCamera.TextScaled = true
@@ -135,7 +142,7 @@ Sewers.BackgroundTransparency = 1.000
 Sewers.BorderSizePixel = 0
 Sewers.Position = UDim2.new(0.056034483, 0, 0.408572167, 0)
 Sewers.Size = UDim2.new(0, 200, 0, 50)
-Sewers.Font = Enum.Font.SourceSans
+Sewers.Font = Enum.Font.SciFi
 Sewers.Text = "Sewers"
 Sewers.TextColor3 = Color3.fromRGB(0, 0, 0)
 Sewers.TextScaled = true
@@ -151,15 +158,15 @@ MainGUI.Size = UDim2.new(0, 357, 0, 147)
 
 Blacksite.Name = "Blacksite"
 Blacksite.Parent = MainGUI
-Blacksite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Blacksite.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Blacksite.BackgroundTransparency = 0.750
 Blacksite.BorderSizePixel = 0
 Blacksite.Position = UDim2.new(0.0192307699, 0, 0.144654095, 0)
 Blacksite.Size = UDim2.new(0, 200, 0, 50)
-Blacksite.ZIndex = 99
-Blacksite.Font = Enum.Font.SourceSans
+Blacksite.ZIndex = 100
+Blacksite.Font = Enum.Font.SciFi
 Blacksite.Text = "Blacksite"
-Blacksite.TextColor3 = Color3.fromRGB(0, 0, 0)
+Blacksite.TextColor3 = Color3.fromRGB(255, 255, 255)
 Blacksite.TextSize = 14.000
 Blacksite.TextWrapped = true
 
@@ -168,39 +175,42 @@ Deposit.Parent = MainGUI
 Deposit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Deposit.BackgroundTransparency = 0.750
 Deposit.BorderSizePixel = 0
-Deposit.Position = UDim2.new(0.598901093, 0, 0.144654095, 0)
-Deposit.Size = UDim2.new(0, 138, 0, 50)
-Deposit.ZIndex = 99
-Deposit.Font = Enum.Font.SourceSans
+Deposit.Position = UDim2.new(0.590497673, 0, 0.144654155, 0)
+Deposit.Size = UDim2.new(0, 140, 0, 50)
+Deposit.ZIndex = 101
+Deposit.Font = Enum.Font.SciFi
 Deposit.Text = "Deposit"
-Deposit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Deposit.TextColor3 = Color3.fromRGB(255, 255, 255)
 Deposit.TextSize = 14.000
 Deposit.TextWrapped = true
 
-TextButton.Parent = MainGUI
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.428571433, 0, 0.509433925, 0)
-TextButton.Size = UDim2.new(0, 200, 0, 50)
-TextButton.ZIndex = 99
-TextButton.Font = Enum.Font.SourceSans
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
+LakeHouse.Name = "LakeHouse"
+LakeHouse.Parent = MainGUI
+LakeHouse.BackgroundColor3 = Color3.fromRGB(255, 170, 127)
+LakeHouse.BackgroundTransparency = 0.750
+LakeHouse.BorderSizePixel = 0
+LakeHouse.Position = UDim2.new(0.420168072, 0, 0.509433866, 0)
+LakeHouse.Size = UDim2.new(0, 200, 0, 51)
+LakeHouse.ZIndex = 99
+LakeHouse.Font = Enum.Font.SciFi
+LakeHouse.Text = "LakeHouse"
+LakeHouse.TextColor3 = Color3.fromRGB(255, 255, 255)
+LakeHouse.TextSize = 14.000
+LakeHouse.TextWrapped = true
 
-Financer.Name = "Financer"
-Financer.Parent = MainGUI
-Financer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Financer.BackgroundTransparency = 0.750
-Financer.BorderSizePixel = 0
-Financer.Position = UDim2.new(0.0192307699, 0, 0.509433985, 0)
-Financer.Size = UDim2.new(0, 140, 0, 50)
-Financer.ZIndex = 99
-Financer.Font = Enum.Font.SourceSans
-Financer.Text = "Withdrawal"
-Financer.TextColor3 = Color3.fromRGB(0, 0, 0)
-Financer.TextSize = 14.000
-Financer.TextWrapped = true
+Withdrawal.Name = "Withdrawal"
+Withdrawal.Parent = MainGUI
+Withdrawal.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+Withdrawal.BackgroundTransparency = 0.750
+Withdrawal.BorderSizePixel = 0
+Withdrawal.Position = UDim2.new(0.0192307699, 0, 0.509433985, 0)
+Withdrawal.Size = UDim2.new(0, 140, 0, 50)
+Withdrawal.ZIndex = 99
+Withdrawal.Font = Enum.Font.SciFi
+Withdrawal.Text = "Withdrawal"
+Withdrawal.TextColor3 = Color3.fromRGB(255, 255, 255)
+Withdrawal.TextSize = 14.000
+Withdrawal.TextWrapped = true
 
 DepositFrame.Name = "DepositFrame"
 DepositFrame.Parent = EPGUI
@@ -216,7 +226,7 @@ TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.Position = UDim2.new(0.056034483, 0, -0.00632911408, 0)
 TextLabel_2.Size = UDim2.new(0, 200, 0, 39)
-TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Font = Enum.Font.SciFi
 TextLabel_2.Text = "Deposit (TPS)"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.TextScaled = true
@@ -230,7 +240,7 @@ DownStairsCameras.BackgroundTransparency = 1.000
 DownStairsCameras.BorderSizePixel = 0
 DownStairsCameras.Position = UDim2.new(0.056034483, 0, 0.128779426, 0)
 DownStairsCameras.Size = UDim2.new(0, 200, 0, 50)
-DownStairsCameras.Font = Enum.Font.SourceSans
+DownStairsCameras.Font = Enum.Font.SciFi
 DownStairsCameras.Text = "Down Stairs Cams"
 DownStairsCameras.TextColor3 = Color3.fromRGB(0, 0, 0)
 DownStairsCameras.TextScaled = true
@@ -243,7 +253,7 @@ CLOSE_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CLOSE_2.BackgroundTransparency = 1.000
 CLOSE_2.Position = UDim2.new(0.056034483, 0, -0.137305707, 0)
 CLOSE_2.Size = UDim2.new(0, 200, 0, 50)
-CLOSE_2.Font = Enum.Font.SourceSans
+CLOSE_2.Font = Enum.Font.SciFi
 CLOSE_2.Text = "Close"
 CLOSE_2.TextColor3 = Color3.fromRGB(255, 0, 0)
 CLOSE_2.TextScaled = true
@@ -257,7 +267,7 @@ ManagerPC.BackgroundTransparency = 1.000
 ManagerPC.BorderSizePixel = 0
 ManagerPC.Position = UDim2.new(0.056034483, 0, 0.279038489, 0)
 ManagerPC.Size = UDim2.new(0, 200, 0, 50)
-ManagerPC.Font = Enum.Font.SourceSans
+ManagerPC.Font = Enum.Font.SciFi
 ManagerPC.Text = "ManagerPC"
 ManagerPC.TextColor3 = Color3.fromRGB(0, 0, 0)
 ManagerPC.TextScaled = true
@@ -271,7 +281,7 @@ UpStairsCameras.BackgroundTransparency = 1.000
 UpStairsCameras.BorderSizePixel = 0
 UpStairsCameras.Position = UDim2.new(0.056034483, 0, 0.408572167, 0)
 UpStairsCameras.Size = UDim2.new(0, 200, 0, 50)
-UpStairsCameras.Font = Enum.Font.SourceSans
+UpStairsCameras.Font = Enum.Font.SciFi
 UpStairsCameras.Text = "Up Stairs Cams"
 UpStairsCameras.TextColor3 = Color3.fromRGB(0, 0, 0)
 UpStairsCameras.TextScaled = true
@@ -285,7 +295,7 @@ Van.BackgroundTransparency = 1.000
 Van.BorderSizePixel = 0
 Van.Position = UDim2.new(0.056034483, 0, 0.538105845, 0)
 Van.Size = UDim2.new(0, 200, 0, 50)
-Van.Font = Enum.Font.SourceSans
+Van.Font = Enum.Font.SciFi
 Van.Text = "Van"
 Van.TextColor3 = Color3.fromRGB(0, 0, 0)
 Van.TextScaled = true
@@ -299,7 +309,7 @@ AccManager.BackgroundTransparency = 1.000
 AccManager.BorderSizePixel = 0
 AccManager.Position = UDim2.new(0.056034483, 0, 0.838624001, 0)
 AccManager.Size = UDim2.new(0, 200, 0, 50)
-AccManager.Font = Enum.Font.SourceSans
+AccManager.Font = Enum.Font.SciFi
 AccManager.Text = "AccManager"
 AccManager.TextColor3 = Color3.fromRGB(0, 0, 0)
 AccManager.TextScaled = true
@@ -313,7 +323,7 @@ Archives.BackgroundTransparency = 1.000
 Archives.BorderSizePixel = 0
 Archives.Position = UDim2.new(0.056034483, 0, 0.680592895, 0)
 Archives.Size = UDim2.new(0, 200, 0, 50)
-Archives.Font = Enum.Font.SourceSans
+Archives.Font = Enum.Font.SciFi
 Archives.Text = "Archives"
 Archives.TextColor3 = Color3.fromRGB(0, 0, 0)
 Archives.TextScaled = true
@@ -326,7 +336,7 @@ REMOVESENSORS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 REMOVESENSORS.BackgroundTransparency = 1.000
 REMOVESENSORS.Position = UDim2.new(0.056034483, 0, 0.994818568, 0)
 REMOVESENSORS.Size = UDim2.new(0, 200, 0, 50)
-REMOVESENSORS.Font = Enum.Font.SourceSans
+REMOVESENSORS.Font = Enum.Font.SciFi
 REMOVESENSORS.Text = "REMOVESENSORS"
 REMOVESENSORS.TextColor3 = Color3.fromRGB(255, 0, 0)
 REMOVESENSORS.TextScaled = true
@@ -347,7 +357,7 @@ TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.Position = UDim2.new(0.056034483, 0, -0.00632911408, 0)
 TextLabel_3.Size = UDim2.new(0, 200, 0, 39)
-TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Font = Enum.Font.SciFi
 TextLabel_3.Text = "Withdrawal (TPS)"
 TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_3.TextScaled = true
@@ -360,7 +370,7 @@ CLOSE_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CLOSE_3.BackgroundTransparency = 1.000
 CLOSE_3.Position = UDim2.new(0.056034483, 0, -0.137305707, 0)
 CLOSE_3.Size = UDim2.new(0, 200, 0, 50)
-CLOSE_3.Font = Enum.Font.SourceSans
+CLOSE_3.Font = Enum.Font.SciFi
 CLOSE_3.Text = "Close"
 CLOSE_3.TextColor3 = Color3.fromRGB(255, 0, 0)
 CLOSE_3.TextScaled = true
@@ -374,7 +384,7 @@ Vdoor1.BackgroundTransparency = 1.000
 Vdoor1.BorderSizePixel = 0
 Vdoor1.Position = UDim2.new(0.0603448302, 0, 0.53551513, 0)
 Vdoor1.Size = UDim2.new(0, 200, 0, 50)
-Vdoor1.Font = Enum.Font.SourceSans
+Vdoor1.Font = Enum.Font.SciFi
 Vdoor1.Text = "Vdoor1"
 Vdoor1.TextColor3 = Color3.fromRGB(0, 0, 0)
 Vdoor1.TextScaled = true
@@ -388,7 +398,7 @@ Vault.BackgroundTransparency = 1.000
 Vault.BorderSizePixel = 0
 Vault.Position = UDim2.new(0.0560344867, 0, 0.123598054, 0)
 Vault.Size = UDim2.new(0, 200, 0, 50)
-Vault.Font = Enum.Font.SourceSans
+Vault.Font = Enum.Font.SciFi
 Vault.Text = "Vault"
 Vault.TextColor3 = Color3.fromRGB(0, 0, 0)
 Vault.TextScaled = true
@@ -402,7 +412,7 @@ Cams.BackgroundTransparency = 1.000
 Cams.BorderSizePixel = 0
 Cams.Position = UDim2.new(0.0474137962, 0, 0.255722404, 0)
 Cams.Size = UDim2.new(0, 200, 0, 50)
-Cams.Font = Enum.Font.SourceSans
+Cams.Font = Enum.Font.SciFi
 Cams.Text = "Cams"
 Cams.TextColor3 = Color3.fromRGB(0, 0, 0)
 Cams.TextScaled = true
@@ -416,7 +426,7 @@ Vdoor2.BackgroundTransparency = 1.000
 Vdoor2.BorderSizePixel = 0
 Vdoor2.Position = UDim2.new(0.0474137962, 0, 0.403390825, 0)
 Vdoor2.Size = UDim2.new(0, 200, 0, 50)
-Vdoor2.Font = Enum.Font.SourceSans
+Vdoor2.Font = Enum.Font.SciFi
 Vdoor2.Text = "Vdoor2"
 Vdoor2.TextColor3 = Color3.fromRGB(0, 0, 0)
 Vdoor2.TextScaled = true
@@ -430,16 +440,106 @@ RandomRoom.BackgroundTransparency = 1.000
 RandomRoom.BorderSizePixel = 0
 RandomRoom.Position = UDim2.new(0.0172413811, 0, 0.665048838, 0)
 RandomRoom.Size = UDim2.new(0, 200, 0, 50)
-RandomRoom.Font = Enum.Font.SourceSans
+RandomRoom.Font = Enum.Font.SciFi
 RandomRoom.Text = "RandoRoomo"
 RandomRoom.TextColor3 = Color3.fromRGB(0, 0, 0)
 RandomRoom.TextScaled = true
 RandomRoom.TextSize = 14.000
 RandomRoom.TextWrapped = true
 
+LakeHouseFrame.Name = "LakeHouseFrame"
+LakeHouseFrame.Parent = EPGUI
+LakeHouseFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LakeHouseFrame.BackgroundTransparency = 1.000
+LakeHouseFrame.Position = UDim2.new(0.744727552, 0, 0.191915765, 0)
+LakeHouseFrame.Size = UDim2.new(0, 232, 0, 386)
+LakeHouseFrame.Visible = false
+LakeHouseFrame.ZIndex = 100
+
+TextLabel_4.Parent = LakeHouseFrame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0.056034483, 0, -0.00632911408, 0)
+TextLabel_4.Size = UDim2.new(0, 200, 0, 39)
+TextLabel_4.Font = Enum.Font.SciFi
+TextLabel_4.Text = "Lake House (TPS)"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+CLOSE_4.Name = "CLOSE"
+CLOSE_4.Parent = LakeHouseFrame
+CLOSE_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CLOSE_4.BackgroundTransparency = 1.000
+CLOSE_4.Position = UDim2.new(0.056034483, 0, -0.137305707, 0)
+CLOSE_4.Size = UDim2.new(0, 200, 0, 50)
+CLOSE_4.Font = Enum.Font.SciFi
+CLOSE_4.Text = "Close"
+CLOSE_4.TextColor3 = Color3.fromRGB(255, 0, 0)
+CLOSE_4.TextScaled = true
+CLOSE_4.TextSize = 14.000
+CLOSE_4.TextWrapped = true
+
+Powerbox.Name = "Powerbox"
+Powerbox.Parent = LakeHouseFrame
+Powerbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Powerbox.BackgroundTransparency = 1.000
+Powerbox.BorderSizePixel = 0
+Powerbox.Position = UDim2.new(0.0560344867, 0, 0.133960754, 0)
+Powerbox.Size = UDim2.new(0, 200, 0, 50)
+Powerbox.Font = Enum.Font.SciFi
+Powerbox.Text = "Powerbox"
+Powerbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+Powerbox.TextScaled = true
+Powerbox.TextSize = 14.000
+Powerbox.TextWrapped = true
+
+Basementdoor1.Name = "Basement door 1"
+Basementdoor1.Parent = LakeHouseFrame
+Basementdoor1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Basementdoor1.BackgroundTransparency = 1.000
+Basementdoor1.BorderSizePixel = 0
+Basementdoor1.Position = UDim2.new(0.0560344867, 0, 0.263494432, 0)
+Basementdoor1.Size = UDim2.new(0, 200, 0, 50)
+Basementdoor1.Font = Enum.Font.SciFi
+Basementdoor1.Text = "Basement door 1"
+Basementdoor1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Basementdoor1.TextScaled = true
+Basementdoor1.TextSize = 14.000
+Basementdoor1.TextWrapped = true
+
+Basementdoor2.Name = "Basement door 2"
+Basementdoor2.Parent = LakeHouseFrame
+Basementdoor2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Basementdoor2.BackgroundTransparency = 1.000
+Basementdoor2.BorderSizePixel = 0
+Basementdoor2.Position = UDim2.new(0.0560344867, 0, 0.387846768, 0)
+Basementdoor2.Size = UDim2.new(0, 200, 0, 50)
+Basementdoor2.Font = Enum.Font.SciFi
+Basementdoor2.Text = "Basement door 2"
+Basementdoor2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Basementdoor2.TextScaled = true
+Basementdoor2.TextSize = 14.000
+Basementdoor2.TextWrapped = true
+
+CamRoom.Name = "CamRoom"
+CamRoom.Parent = LakeHouseFrame
+CamRoom.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CamRoom.BackgroundTransparency = 1.000
+CamRoom.BorderSizePixel = 0
+CamRoom.Position = UDim2.new(0.0560344867, 0, 0.501836419, 0)
+CamRoom.Size = UDim2.new(0, 200, 0, 50)
+CamRoom.Font = Enum.Font.SciFi
+CamRoom.Text = "CamRoom"
+CamRoom.TextColor3 = Color3.fromRGB(0, 0, 0)
+CamRoom.TextScaled = true
+CamRoom.TextSize = 14.000
+CamRoom.TextWrapped = true
+
 -- Scripts:
 
-local function GMKGH_fake_script() -- ControlRoom.LocalScript 
+local function QWPJ_fake_script() -- ControlRoom.LocalScript 
 	local script = Instance.new('LocalScript', ControlRoom)
 
 	
@@ -452,8 +552,8 @@ local function GMKGH_fake_script() -- ControlRoom.LocalScript
 	
 	
 end
-coroutine.wrap(GMKGH_fake_script)()
-local function HRMWD_fake_script() -- CLOSE.LocalScript 
+coroutine.wrap(QWPJ_fake_script)()
+local function QJLLAN_fake_script() -- CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE)
 
 	script.Parent.Activated:Connect(function()
@@ -461,8 +561,8 @@ local function HRMWD_fake_script() -- CLOSE.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(HRMWD_fake_script)()
-local function RAJGSA_fake_script() -- CargoCamera.LocalScript 
+coroutine.wrap(QJLLAN_fake_script)()
+local function FQCAAPY_fake_script() -- CargoCamera.LocalScript 
 	local script = Instance.new('LocalScript', CargoCamera)
 
 	
@@ -475,8 +575,8 @@ local function RAJGSA_fake_script() -- CargoCamera.LocalScript
 	
 	
 end
-coroutine.wrap(RAJGSA_fake_script)()
-local function GSBBE_fake_script() -- Sewers.LocalScript 
+coroutine.wrap(FQCAAPY_fake_script)()
+local function DFEBAMQ_fake_script() -- Sewers.LocalScript 
 	local script = Instance.new('LocalScript', Sewers)
 
 	
@@ -489,8 +589,8 @@ local function GSBBE_fake_script() -- Sewers.LocalScript
 	
 	
 end
-coroutine.wrap(GSBBE_fake_script)()
-local function VDXD_fake_script() -- Blacksite.LocalScript 
+coroutine.wrap(DFEBAMQ_fake_script)()
+local function KLWLHC_fake_script() -- Blacksite.LocalScript 
 	local script = Instance.new('LocalScript', Blacksite)
 
 	script.Parent.Activated:Connect(function()
@@ -498,8 +598,8 @@ local function VDXD_fake_script() -- Blacksite.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(VDXD_fake_script)()
-local function KAOWQYR_fake_script() -- Deposit.LocalScript 
+coroutine.wrap(KLWLHC_fake_script)()
+local function HYKPSL_fake_script() -- Deposit.LocalScript 
 	local script = Instance.new('LocalScript', Deposit)
 
 	script.Parent.Activated:Connect(function()
@@ -507,17 +607,26 @@ local function KAOWQYR_fake_script() -- Deposit.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KAOWQYR_fake_script)()
-local function LZQMDN_fake_script() -- Financer.LocalScript 
-	local script = Instance.new('LocalScript', Financer)
+coroutine.wrap(HYKPSL_fake_script)()
+local function FWZVM_fake_script() -- LakeHouse.LocalScript 
+	local script = Instance.new('LocalScript', LakeHouse)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.LakeHouseFrame.Visible = true
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(FWZVM_fake_script)()
+local function SPWPZ_fake_script() -- Withdrawal.LocalScript 
+	local script = Instance.new('LocalScript', Withdrawal)
 
 	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Parent.WithdrawalFrame.Visible = true
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(LZQMDN_fake_script)()
-local function IFPCAN_fake_script() -- DownStairsCameras.LocalScript 
+coroutine.wrap(SPWPZ_fake_script)()
+local function CAZR_fake_script() -- DownStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', DownStairsCameras)
 
 	
@@ -530,8 +639,8 @@ local function IFPCAN_fake_script() -- DownStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(IFPCAN_fake_script)()
-local function CTMIA_fake_script() -- CLOSE_2.LocalScript 
+coroutine.wrap(CAZR_fake_script)()
+local function CSIDZJ_fake_script() -- CLOSE_2.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_2)
 
 	script.Parent.Activated:Connect(function()
@@ -539,8 +648,8 @@ local function CTMIA_fake_script() -- CLOSE_2.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(CTMIA_fake_script)()
-local function MKKFRQ_fake_script() -- ManagerPC.LocalScript 
+coroutine.wrap(CSIDZJ_fake_script)()
+local function YBZLQAJ_fake_script() -- ManagerPC.LocalScript 
 	local script = Instance.new('LocalScript', ManagerPC)
 
 	
@@ -553,8 +662,8 @@ local function MKKFRQ_fake_script() -- ManagerPC.LocalScript
 	
 	
 end
-coroutine.wrap(MKKFRQ_fake_script)()
-local function NYWGQY_fake_script() -- UpStairsCameras.LocalScript 
+coroutine.wrap(YBZLQAJ_fake_script)()
+local function HGJQX_fake_script() -- UpStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', UpStairsCameras)
 
 	
@@ -567,8 +676,8 @@ local function NYWGQY_fake_script() -- UpStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(NYWGQY_fake_script)()
-local function HTZTB_fake_script() -- Van.LocalScript 
+coroutine.wrap(HGJQX_fake_script)()
+local function JYJPLX_fake_script() -- Van.LocalScript 
 	local script = Instance.new('LocalScript', Van)
 
 	
@@ -581,8 +690,8 @@ local function HTZTB_fake_script() -- Van.LocalScript
 	
 	
 end
-coroutine.wrap(HTZTB_fake_script)()
-local function TKIFC_fake_script() -- AccManager.LocalScript 
+coroutine.wrap(JYJPLX_fake_script)()
+local function HKBMOYK_fake_script() -- AccManager.LocalScript 
 	local script = Instance.new('LocalScript', AccManager)
 
 	
@@ -595,8 +704,8 @@ local function TKIFC_fake_script() -- AccManager.LocalScript
 	
 	
 end
-coroutine.wrap(TKIFC_fake_script)()
-local function FDSDVZU_fake_script() -- Archives.LocalScript 
+coroutine.wrap(HKBMOYK_fake_script)()
+local function GHRG_fake_script() -- Archives.LocalScript 
 	local script = Instance.new('LocalScript', Archives)
 
 	
@@ -609,16 +718,16 @@ local function FDSDVZU_fake_script() -- Archives.LocalScript
 	
 	
 end
-coroutine.wrap(FDSDVZU_fake_script)()
-local function LQYKAJZ_fake_script() -- REMOVESENSORS.LocalScript 
+coroutine.wrap(GHRG_fake_script)()
+local function DPKWLNP_fake_script() -- REMOVESENSORS.LocalScript 
 	local script = Instance.new('LocalScript', REMOVESENSORS)
 
 	script.Parent.Activated:Connect(function()
 	game.Level.Triggers.SensorZone:Destroy()
 	end)
 end
-coroutine.wrap(LQYKAJZ_fake_script)()
-local function ACGWT_fake_script() -- CLOSE_3.LocalScript 
+coroutine.wrap(DPKWLNP_fake_script)()
+local function RWMQ_fake_script() -- CLOSE_3.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_3)
 
 	script.Parent.Activated:Connect(function()
@@ -626,8 +735,8 @@ local function ACGWT_fake_script() -- CLOSE_3.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(ACGWT_fake_script)()
-local function OQIVT_fake_script() -- Vdoor1.LocalScript 
+coroutine.wrap(RWMQ_fake_script)()
+local function LGKFMY_fake_script() -- Vdoor1.LocalScript 
 	local script = Instance.new('LocalScript', Vdoor1)
 
 	
@@ -640,8 +749,8 @@ local function OQIVT_fake_script() -- Vdoor1.LocalScript
 	
 	
 end
-coroutine.wrap(OQIVT_fake_script)()
-local function GGARPK_fake_script() -- Vault.LocalScript 
+coroutine.wrap(LGKFMY_fake_script)()
+local function KUPNCGN_fake_script() -- Vault.LocalScript 
 	local script = Instance.new('LocalScript', Vault)
 
 	
@@ -654,22 +763,22 @@ local function GGARPK_fake_script() -- Vault.LocalScript
 	
 	
 end
-coroutine.wrap(GGARPK_fake_script)()
-local function THATM_fake_script() -- Cams.LocalScript 
+coroutine.wrap(KUPNCGN_fake_script)()
+local function MEDFQXB_fake_script() -- Cams.LocalScript 
 	local script = Instance.new('LocalScript', Cams)
 
 	
 	script.Parent.Activated:Connect(function()
 		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Level.Triggers.CommandCenter.ToolIcon.CFrame
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Level.Triggers.CommandCenter.ToolIcon.CFrame
 	end)
 		
 	
 	
 end
-coroutine.wrap(THATM_fake_script)()
-local function EOHI_fake_script() -- Vdoor2.LocalScript 
+coroutine.wrap(MEDFQXB_fake_script)()
+local function YCNNJP_fake_script() -- Vdoor2.LocalScript 
 	local script = Instance.new('LocalScript', Vdoor2)
 
 	
@@ -682,8 +791,8 @@ local function EOHI_fake_script() -- Vdoor2.LocalScript
 	
 	
 end
-coroutine.wrap(EOHI_fake_script)()
-local function JSLBN_fake_script() -- RandomRoom.LocalScript 
+coroutine.wrap(YCNNJP_fake_script)()
+local function XRBSUNE_fake_script() -- RandomRoom.LocalScript 
 	local script = Instance.new('LocalScript', RandomRoom)
 
 	
@@ -695,4 +804,69 @@ local function JSLBN_fake_script() -- RandomRoom.LocalScript
 	
 	
 end
-coroutine.wrap(JSLBN_fake_script)()
+coroutine.wrap(XRBSUNE_fake_script)()
+local function CZEBOR_fake_script() -- CLOSE_4.LocalScript 
+	local script = Instance.new('LocalScript', CLOSE_4)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.MainGUI.Visible = true
+	end)
+end
+coroutine.wrap(CZEBOR_fake_script)()
+local function JTKSRVK_fake_script() -- Powerbox.LocalScript 
+	local script = Instance.new('LocalScript', Powerbox)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Level.Geometry.PowerBox.Case.BasePart.CFrame
+	end)
+		
+	
+	
+end
+coroutine.wrap(JTKSRVK_fake_script)()
+local function UBISVI_fake_script() -- Basementdoor1.LocalScript 
+	local script = Instance.new('LocalScript', Basementdoor1)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(66.464, 17.5, -36.571)
+	end)
+		
+	
+	
+end
+coroutine.wrap(UBISVI_fake_script)()
+local function MTBCBY_fake_script() -- Basementdoor2.LocalScript 
+	local script = Instance.new('LocalScript', Basementdoor2)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7.789, 17.1, -60.229)
+	end)
+		
+	
+	
+end
+coroutine.wrap(MTBCBY_fake_script)()
+local function RCOR_fake_script() -- CamRoom.LocalScript 
+	local script = Instance.new('LocalScript', CamRoom)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Level.Triggers.CommandCenter.ToolIcon.CFrame
+	end)
+		
+	
+	
+end
+coroutine.wrap(RCOR_fake_script)()
