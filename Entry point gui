@@ -1,4 +1,34 @@
---Version: 1.8
+-- Version: 1.9
+local ESP = false -- set true for esp
+
+
+-- Esp Support:
+if ESP == true then
+for i,v in pairs(game.Workspace.Level.Actors:GetChildren()) do
+	if v.Character.HumanoidRootPart:FindFirstChild("Solutions") then
+	print("else")
+	else
+		local BillboardGui = Instance.new('BillboardGui')
+		local TextLabel = Instance.new('TextLabel')
+
+		BillboardGui.Parent = v.Character.HumanoidRootPart
+		BillboardGui.AlwaysOnTop = true
+		BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+		BillboardGui.StudsOffset = Vector3.new(0,2,0)
+		BillboardGui.Name = "ACTORS"
+
+		TextLabel.Parent = BillboardGui
+		TextLabel.BackgroundColor3 = Color3.new(1,1,1)
+		TextLabel.BackgroundTransparency = 1
+		TextLabel.Size = UDim2.new(1, 0, 1, 0)
+		TextLabel.Text = "NPC0"
+		TextLabel.TextColor3 = Color3.new(1, 1, 1)
+		TextLabel.TextScaled = true
+		end
+	end
+end
+
+
 
 -- Instances:
 
@@ -13,7 +43,7 @@ local MainGUI = Instance.new("Frame")
 local Blacksite = Instance.new("TextButton")
 local Deposit = Instance.new("TextButton")
 local TextButton = Instance.new("TextButton")
-local TextButton_2 = Instance.new("TextButton")
+local Financer = Instance.new("TextButton")
 local DepositFrame = Instance.new("Frame")
 local TextLabel_2 = Instance.new("TextLabel")
 local DownStairsCameras = Instance.new("TextButton")
@@ -23,6 +53,14 @@ local UpStairsCameras = Instance.new("TextButton")
 local Van = Instance.new("TextButton")
 local AccManager = Instance.new("TextButton")
 local Archives = Instance.new("TextButton")
+local REMOVESENSORS = Instance.new("TextButton")
+local FinancerFrame = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local CLOSE_3 = Instance.new("TextButton")
+local Laptop = Instance.new("TextButton")
+local Powerbox = Instance.new("TextButton")
+local Inside = Instance.new("TextButton")
+local HardDrive = Instance.new("TextButton")
 
 --Properties:
 
@@ -152,16 +190,19 @@ TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
 TextButton.TextWrapped = true
 
-TextButton_2.Parent = MainGUI
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0.0192307699, 0, 0.509433985, 0)
-TextButton_2.Size = UDim2.new(0, 140, 0, 50)
-TextButton_2.ZIndex = 99
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextSize = 14.000
-TextButton_2.TextWrapped = true
+Financer.Name = "Financer"
+Financer.Parent = MainGUI
+Financer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Financer.BackgroundTransparency = 0.750
+Financer.BorderSizePixel = 0
+Financer.Position = UDim2.new(0.0192307699, 0, 0.509433985, 0)
+Financer.Size = UDim2.new(0, 140, 0, 50)
+Financer.ZIndex = 99
+Financer.Font = Enum.Font.SourceSans
+Financer.Text = "Financer "
+Financer.TextColor3 = Color3.fromRGB(0, 0, 0)
+Financer.TextSize = 14.000
+Financer.TextWrapped = true
 
 DepositFrame.Name = "DepositFrame"
 DepositFrame.Parent = EPGUI
@@ -281,9 +322,112 @@ Archives.TextScaled = true
 Archives.TextSize = 14.000
 Archives.TextWrapped = true
 
+REMOVESENSORS.Name = "REMOVESENSORS"
+REMOVESENSORS.Parent = DepositFrame
+REMOVESENSORS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+REMOVESENSORS.BackgroundTransparency = 1.000
+REMOVESENSORS.Position = UDim2.new(0.056034483, 0, 0.994818568, 0)
+REMOVESENSORS.Size = UDim2.new(0, 200, 0, 50)
+REMOVESENSORS.Font = Enum.Font.SourceSans
+REMOVESENSORS.Text = "REMOVESENSORS"
+REMOVESENSORS.TextColor3 = Color3.fromRGB(255, 0, 0)
+REMOVESENSORS.TextScaled = true
+REMOVESENSORS.TextSize = 14.000
+REMOVESENSORS.TextWrapped = true
+
+FinancerFrame.Name = "FinancerFrame"
+FinancerFrame.Parent = EPGUI
+FinancerFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FinancerFrame.BackgroundTransparency = 1.000
+FinancerFrame.Position = UDim2.new(0.744727552, 0, 0.191915765, 0)
+FinancerFrame.Size = UDim2.new(0, 232, 0, 386)
+FinancerFrame.Visible = false
+FinancerFrame.ZIndex = 100
+
+TextLabel_3.Parent = FinancerFrame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.056034483, 0, -0.00632911408, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 39)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Financer (TPS)"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+CLOSE_3.Name = "CLOSE"
+CLOSE_3.Parent = FinancerFrame
+CLOSE_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CLOSE_3.BackgroundTransparency = 1.000
+CLOSE_3.Position = UDim2.new(0.056034483, 0, -0.137305707, 0)
+CLOSE_3.Size = UDim2.new(0, 200, 0, 50)
+CLOSE_3.Font = Enum.Font.SourceSans
+CLOSE_3.Text = "Close"
+CLOSE_3.TextColor3 = Color3.fromRGB(255, 0, 0)
+CLOSE_3.TextScaled = true
+CLOSE_3.TextSize = 14.000
+CLOSE_3.TextWrapped = true
+
+Laptop.Name = "Laptop"
+Laptop.Parent = FinancerFrame
+Laptop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Laptop.BackgroundTransparency = 1.000
+Laptop.BorderSizePixel = 0
+Laptop.Position = UDim2.new(0.056034483, 0, 0.126188755, 0)
+Laptop.Size = UDim2.new(0, 200, 0, 50)
+Laptop.Font = Enum.Font.SourceSans
+Laptop.Text = "Laptop"
+Laptop.TextColor3 = Color3.fromRGB(0, 0, 0)
+Laptop.TextScaled = true
+Laptop.TextSize = 14.000
+Laptop.TextWrapped = true
+
+Powerbox.Name = "Powerbox"
+Powerbox.Parent = FinancerFrame
+Powerbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Powerbox.BackgroundTransparency = 1.000
+Powerbox.BorderSizePixel = 0
+Powerbox.Position = UDim2.new(0.0215517245, 0, 0.281629145, 0)
+Powerbox.Size = UDim2.new(0, 200, 0, 50)
+Powerbox.Font = Enum.Font.SourceSans
+Powerbox.Text = "Powerbox(s)"
+Powerbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+Powerbox.TextScaled = true
+Powerbox.TextSize = 14.000
+Powerbox.TextWrapped = true
+
+Inside.Name = "Inside"
+Inside.Parent = FinancerFrame
+Inside.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Inside.BackgroundTransparency = 1.000
+Inside.BorderSizePixel = 0
+Inside.Position = UDim2.new(0.0215517245, 0, 0.442250937, 0)
+Inside.Size = UDim2.new(0, 200, 0, 50)
+Inside.Font = Enum.Font.SourceSans
+Inside.Text = "Inside"
+Inside.TextColor3 = Color3.fromRGB(0, 0, 0)
+Inside.TextScaled = true
+Inside.TextSize = 14.000
+Inside.TextWrapped = true
+
+HardDrive.Name = "HardDrive"
+HardDrive.Parent = FinancerFrame
+HardDrive.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HardDrive.BackgroundTransparency = 1.000
+HardDrive.BorderSizePixel = 0
+HardDrive.Position = UDim2.new(0.0215517245, 0, 0.597691357, 0)
+HardDrive.Size = UDim2.new(0, 200, 0, 50)
+HardDrive.Font = Enum.Font.SourceSans
+HardDrive.Text = "Harddrive (may work)"
+HardDrive.TextColor3 = Color3.fromRGB(0, 0, 0)
+HardDrive.TextScaled = true
+HardDrive.TextSize = 14.000
+HardDrive.TextWrapped = true
+
 -- Scripts:
 
-local function YDYSQT_fake_script() -- ControlRoom.LocalScript 
+local function GRRR_fake_script() -- ControlRoom.LocalScript 
 	local script = Instance.new('LocalScript', ControlRoom)
 
 	
@@ -296,8 +440,8 @@ local function YDYSQT_fake_script() -- ControlRoom.LocalScript
 	
 	
 end
-coroutine.wrap(YDYSQT_fake_script)()
-local function YTZVT_fake_script() -- CLOSE.LocalScript 
+coroutine.wrap(GRRR_fake_script)()
+local function ITQJP_fake_script() -- CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE)
 
 	script.Parent.Activated:Connect(function()
@@ -305,8 +449,8 @@ local function YTZVT_fake_script() -- CLOSE.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(YTZVT_fake_script)()
-local function ZQPI_fake_script() -- CargoCamera.LocalScript 
+coroutine.wrap(ITQJP_fake_script)()
+local function PRFWZS_fake_script() -- CargoCamera.LocalScript 
 	local script = Instance.new('LocalScript', CargoCamera)
 
 	
@@ -319,8 +463,8 @@ local function ZQPI_fake_script() -- CargoCamera.LocalScript
 	
 	
 end
-coroutine.wrap(ZQPI_fake_script)()
-local function GKLHLU_fake_script() -- Sewers.LocalScript 
+coroutine.wrap(PRFWZS_fake_script)()
+local function HAUWJ_fake_script() -- Sewers.LocalScript 
 	local script = Instance.new('LocalScript', Sewers)
 
 	
@@ -333,8 +477,8 @@ local function GKLHLU_fake_script() -- Sewers.LocalScript
 	
 	
 end
-coroutine.wrap(GKLHLU_fake_script)()
-local function ZXVSC_fake_script() -- Blacksite.LocalScript 
+coroutine.wrap(HAUWJ_fake_script)()
+local function QLDTEP_fake_script() -- Blacksite.LocalScript 
 	local script = Instance.new('LocalScript', Blacksite)
 
 	script.Parent.Activated:Connect(function()
@@ -342,8 +486,8 @@ local function ZXVSC_fake_script() -- Blacksite.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(ZXVSC_fake_script)()
-local function JJUTW_fake_script() -- Deposit.LocalScript 
+coroutine.wrap(QLDTEP_fake_script)()
+local function GKKJI_fake_script() -- Deposit.LocalScript 
 	local script = Instance.new('LocalScript', Deposit)
 
 	script.Parent.Activated:Connect(function()
@@ -351,8 +495,17 @@ local function JJUTW_fake_script() -- Deposit.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(JJUTW_fake_script)()
-local function WACILV_fake_script() -- DownStairsCameras.LocalScript 
+coroutine.wrap(GKKJI_fake_script)()
+local function VUXHYNF_fake_script() -- Financer.LocalScript 
+	local script = Instance.new('LocalScript', Financer)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.FinancerFrame.Visible = true
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(VUXHYNF_fake_script)()
+local function ZCUA_fake_script() -- DownStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', DownStairsCameras)
 
 	
@@ -365,8 +518,8 @@ local function WACILV_fake_script() -- DownStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(WACILV_fake_script)()
-local function MHMJK_fake_script() -- CLOSE_2.LocalScript 
+coroutine.wrap(ZCUA_fake_script)()
+local function PEAY_fake_script() -- CLOSE_2.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_2)
 
 	script.Parent.Activated:Connect(function()
@@ -374,8 +527,8 @@ local function MHMJK_fake_script() -- CLOSE_2.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(MHMJK_fake_script)()
-local function RCHR_fake_script() -- ManagerPC.LocalScript 
+coroutine.wrap(PEAY_fake_script)()
+local function QPRU_fake_script() -- ManagerPC.LocalScript 
 	local script = Instance.new('LocalScript', ManagerPC)
 
 	
@@ -388,8 +541,8 @@ local function RCHR_fake_script() -- ManagerPC.LocalScript
 	
 	
 end
-coroutine.wrap(RCHR_fake_script)()
-local function AACVTC_fake_script() -- UpStairsCameras.LocalScript 
+coroutine.wrap(QPRU_fake_script)()
+local function NAJUSA_fake_script() -- UpStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', UpStairsCameras)
 
 	
@@ -402,8 +555,8 @@ local function AACVTC_fake_script() -- UpStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(AACVTC_fake_script)()
-local function GKBOK_fake_script() -- Van.LocalScript 
+coroutine.wrap(NAJUSA_fake_script)()
+local function PEMKAA_fake_script() -- Van.LocalScript 
 	local script = Instance.new('LocalScript', Van)
 
 	
@@ -416,8 +569,8 @@ local function GKBOK_fake_script() -- Van.LocalScript
 	
 	
 end
-coroutine.wrap(GKBOK_fake_script)()
-local function EXGM_fake_script() -- AccManager.LocalScript 
+coroutine.wrap(PEMKAA_fake_script)()
+local function UXYA_fake_script() -- AccManager.LocalScript 
 	local script = Instance.new('LocalScript', AccManager)
 
 	
@@ -430,8 +583,8 @@ local function EXGM_fake_script() -- AccManager.LocalScript
 	
 	
 end
-coroutine.wrap(EXGM_fake_script)()
-local function UDHSEME_fake_script() -- Archives.LocalScript 
+coroutine.wrap(UXYA_fake_script)()
+local function YWJJLA_fake_script() -- Archives.LocalScript 
 	local script = Instance.new('LocalScript', Archives)
 
 	
@@ -444,4 +597,77 @@ local function UDHSEME_fake_script() -- Archives.LocalScript
 	
 	
 end
-coroutine.wrap(UDHSEME_fake_script)()
+coroutine.wrap(YWJJLA_fake_script)()
+local function LVNBTRR_fake_script() -- REMOVESENSORS.LocalScript 
+	local script = Instance.new('LocalScript', REMOVESENSORS)
+
+	script.Parent.Activated:Connect(function()
+	game.Level.Triggers.SensorZone:Destroy()
+	end)
+end
+coroutine.wrap(LVNBTRR_fake_script)()
+local function MTOCXJZ_fake_script() -- CLOSE_3.LocalScript 
+	local script = Instance.new('LocalScript', CLOSE_3)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.MainGUI.Visible = true
+	end)
+end
+coroutine.wrap(MTOCXJZ_fake_script)()
+local function MPTUMMF_fake_script() -- Laptop.LocalScript 
+	local script = Instance.new('LocalScript', Laptop)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Level.Geometry.Computer.Base.CFrame
+	end)
+		
+	
+	
+end
+coroutine.wrap(MPTUMMF_fake_script)()
+local function ABMMWV_fake_script() -- Powerbox.LocalScript 
+	local script = Instance.new('LocalScript', Powerbox)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Level.Geometry.Powerbox.PowerDoor.Part.CFrame
+	end)
+		
+	
+	
+end
+coroutine.wrap(ABMMWV_fake_script)()
+local function CAKHW_fake_script() -- Inside.LocalScript 
+	local script = Instance.new('LocalScript', Inside)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9.228, 13.2, -47.775)
+	end)
+		
+	
+	
+end
+coroutine.wrap(CAKHW_fake_script)()
+local function FGQEIV_fake_script() -- HardDrive.LocalScript 
+	local script = Instance.new('LocalScript', HardDrive)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Level.GroundedItems.HardDrive.Part.CFrame
+	end)
+		
+	
+	
+end
+coroutine.wrap(FGQEIV_fake_script)()
