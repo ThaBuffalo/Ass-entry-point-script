@@ -30,36 +30,35 @@ end
 -- Instances:
 
 local EPGUI = Instance.new("ScreenGui")
-local WithdrawalFrame = Instance.new("Frame")
+local BlacksiteFrame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
+local ControlRoom = Instance.new("TextButton")
 local CLOSE = Instance.new("TextButton")
-local Cams = Instance.new("TextButton")
-local ServerRoom = Instance.new("TextButton")
-local Van = Instance.new("TextButton")
-local Vault = Instance.new("TextButton")
+local CargoCamera = Instance.new("TextButton")
+local Sewers = Instance.new("TextButton")
+local MainGUI = Instance.new("Frame")
+local Blacksite = Instance.new("TextButton")
+local Deposit = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local Financer = Instance.new("TextButton")
 local DepositFrame = Instance.new("Frame")
 local TextLabel_2 = Instance.new("TextLabel")
 local DownStairsCameras = Instance.new("TextButton")
 local CLOSE_2 = Instance.new("TextButton")
 local ManagerPC = Instance.new("TextButton")
 local UpStairsCameras = Instance.new("TextButton")
-local Van_2 = Instance.new("TextButton")
+local Van = Instance.new("TextButton")
 local AccManager = Instance.new("TextButton")
 local Archives = Instance.new("TextButton")
 local REMOVESENSORS = Instance.new("TextButton")
-local BlacksiteFrame = Instance.new("Frame")
+local WithdrawalFrame = Instance.new("Frame")
 local TextLabel_3 = Instance.new("TextLabel")
-local ControlRoom = Instance.new("TextButton")
 local CLOSE_3 = Instance.new("TextButton")
-local CargoCamera = Instance.new("TextButton")
-local Sewers = Instance.new("TextButton")
-local MainGui = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local ImageLabel = Instance.new("ImageLabel")
-local Blacksite = Instance.new("TextButton")
-local Deposit = Instance.new("TextButton")
-local Scientist = Instance.new("TextButton")
-local Withdrawal = Instance.new("TextButton")
+local Vdoor1 = Instance.new("TextButton")
+local Vault = Instance.new("TextButton")
+local Cams = Instance.new("TextButton")
+local Vdoor2 = Instance.new("TextButton")
+local ServRoom = Instance.new("TextButton")
 
 --Properties:
 
@@ -67,33 +66,47 @@ EPGUI.Name = "EPGUI"
 EPGUI.Parent = game:GetService("CoreGui")
 EPGUI.ResetOnSpawn = false
 
-WithdrawalFrame.Name = "WithdrawalFrame"
-WithdrawalFrame.Parent = EPGUI
-WithdrawalFrame.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
-WithdrawalFrame.BackgroundTransparency = 0.500
-WithdrawalFrame.Position = UDim2.new(0.729349673, 0, 0.208899468, 0)
-WithdrawalFrame.Size = UDim2.new(0, 232, 0, 119)
-WithdrawalFrame.Visible = false
-WithdrawalFrame.ZIndex = 0
+BlacksiteFrame.Name = "BlacksiteFrame"
+BlacksiteFrame.Parent = EPGUI
+BlacksiteFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BlacksiteFrame.BackgroundTransparency = 1.000
+BlacksiteFrame.Position = UDim2.new(0.744727552, 0, 0.191915765, 0)
+BlacksiteFrame.Size = UDim2.new(0, 232, 0, 386)
+BlacksiteFrame.Visible = false
+BlacksiteFrame.ZIndex = 100
 
-TextLabel.Parent = WithdrawalFrame
+TextLabel.Parent = BlacksiteFrame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.258749902, 0, -0.35929507, 0)
-TextLabel.Size = UDim2.new(0, 114, 0, 30)
+TextLabel.Position = UDim2.new(0.056034483, 0, -0.00632911408, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 39)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Withdrawal (TPS)"
+TextLabel.Text = "Blacksite (TPS)"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
+ControlRoom.Name = "Control Room"
+ControlRoom.Parent = BlacksiteFrame
+ControlRoom.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ControlRoom.BackgroundTransparency = 1.000
+ControlRoom.BorderSizePixel = 0
+ControlRoom.Position = UDim2.new(0.056034483, 0, 0.128779426, 0)
+ControlRoom.Size = UDim2.new(0, 200, 0, 50)
+ControlRoom.Font = Enum.Font.SourceSans
+ControlRoom.Text = "Control room (BEHIND GUARD)"
+ControlRoom.TextColor3 = Color3.fromRGB(0, 0, 0)
+ControlRoom.TextScaled = true
+ControlRoom.TextSize = 14.000
+ControlRoom.TextWrapped = true
+
 CLOSE.Name = "CLOSE"
-CLOSE.Parent = WithdrawalFrame
+CLOSE.Parent = BlacksiteFrame
 CLOSE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CLOSE.BackgroundTransparency = 1.000
-CLOSE.Position = UDim2.new(0.445693702, 0, -0.190316588, 0)
-CLOSE.Size = UDim2.new(0, 29, 0, 22)
+CLOSE.Position = UDim2.new(0.056034483, 0, -0.137305707, 0)
+CLOSE.Size = UDim2.new(0, 200, 0, 50)
 CLOSE.Font = Enum.Font.SourceSans
 CLOSE.Text = "Close"
 CLOSE.TextColor3 = Color3.fromRGB(255, 0, 0)
@@ -101,61 +114,93 @@ CLOSE.TextScaled = true
 CLOSE.TextSize = 14.000
 CLOSE.TextWrapped = true
 
-Cams.Name = "Cams"
-Cams.Parent = WithdrawalFrame
-Cams.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Cams.BackgroundTransparency = 1.000
-Cams.BorderSizePixel = 0
-Cams.Position = UDim2.new(0.495550454, 0, -0.0232709907, 0)
-Cams.Size = UDim2.new(0, 117, 0, 50)
-Cams.Font = Enum.Font.SourceSans
-Cams.Text = "Cams"
-Cams.TextColor3 = Color3.fromRGB(0, 0, 0)
-Cams.TextScaled = true
-Cams.TextSize = 14.000
-Cams.TextWrapped = true
+CargoCamera.Name = "Cargo Camera"
+CargoCamera.Parent = BlacksiteFrame
+CargoCamera.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CargoCamera.BackgroundTransparency = 1.000
+CargoCamera.BorderSizePixel = 0
+CargoCamera.Position = UDim2.new(0.056034483, 0, 0.279038489, 0)
+CargoCamera.Size = UDim2.new(0, 200, 0, 50)
+CargoCamera.Font = Enum.Font.SourceSans
+CargoCamera.Text = "Cargo Cameras"
+CargoCamera.TextColor3 = Color3.fromRGB(0, 0, 0)
+CargoCamera.TextScaled = true
+CargoCamera.TextSize = 14.000
+CargoCamera.TextWrapped = true
 
-ServerRoom.Name = "ServerRoom"
-ServerRoom.Parent = WithdrawalFrame
-ServerRoom.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ServerRoom.BackgroundTransparency = 1.000
-ServerRoom.BorderSizePixel = 0
-ServerRoom.Position = UDim2.new(0.00659942627, 0, 0.407101035, 0)
-ServerRoom.Size = UDim2.new(0, 130, 0, 42)
-ServerRoom.Font = Enum.Font.SourceSans
-ServerRoom.Text = "ServerRoom"
-ServerRoom.TextColor3 = Color3.fromRGB(0, 0, 0)
-ServerRoom.TextScaled = true
-ServerRoom.TextSize = 14.000
-ServerRoom.TextWrapped = true
+Sewers.Name = "Sewers"
+Sewers.Parent = BlacksiteFrame
+Sewers.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sewers.BackgroundTransparency = 1.000
+Sewers.BorderSizePixel = 0
+Sewers.Position = UDim2.new(0.056034483, 0, 0.408572167, 0)
+Sewers.Size = UDim2.new(0, 200, 0, 50)
+Sewers.Font = Enum.Font.SourceSans
+Sewers.Text = "Sewers"
+Sewers.TextColor3 = Color3.fromRGB(0, 0, 0)
+Sewers.TextScaled = true
+Sewers.TextSize = 14.000
+Sewers.TextWrapped = true
 
-Van.Name = "Van"
-Van.Parent = WithdrawalFrame
-Van.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Van.BackgroundTransparency = 1.000
-Van.BorderSizePixel = 0
-Van.Position = UDim2.new(-0.0132838283, 0, -0.00559920631, 0)
-Van.Size = UDim2.new(0, 120, 0, 50)
-Van.Font = Enum.Font.SourceSans
-Van.Text = "Van"
-Van.TextColor3 = Color3.fromRGB(0, 0, 0)
-Van.TextScaled = true
-Van.TextSize = 14.000
-Van.TextWrapped = true
+MainGUI.Name = "MainGUI"
+MainGUI.Parent = EPGUI
+MainGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainGUI.BackgroundTransparency = 1.000
+MainGUI.Position = UDim2.new(0, 0, 0.42629078, 0)
+MainGUI.Size = UDim2.new(0, 357, 0, 147)
 
-Vault.Name = "Vault"
-Vault.Parent = WithdrawalFrame
-Vault.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Vault.BackgroundTransparency = 1.000
-Vault.BorderSizePixel = 0
-Vault.Position = UDim2.new(0.587768018, 0, 0.394748837, 0)
-Vault.Size = UDim2.new(0, 95, 0, 45)
-Vault.Font = Enum.Font.SourceSans
-Vault.Text = "Vaults"
-Vault.TextColor3 = Color3.fromRGB(0, 0, 0)
-Vault.TextScaled = true
-Vault.TextSize = 14.000
-Vault.TextWrapped = true
+Blacksite.Name = "Blacksite"
+Blacksite.Parent = MainGUI
+Blacksite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Blacksite.BackgroundTransparency = 0.750
+Blacksite.BorderSizePixel = 0
+Blacksite.Position = UDim2.new(0.0192307699, 0, 0.144654095, 0)
+Blacksite.Size = UDim2.new(0, 200, 0, 50)
+Blacksite.ZIndex = 99
+Blacksite.Font = Enum.Font.SourceSans
+Blacksite.Text = "Blacksite"
+Blacksite.TextColor3 = Color3.fromRGB(0, 0, 0)
+Blacksite.TextSize = 14.000
+Blacksite.TextWrapped = true
+
+Deposit.Name = "Deposit"
+Deposit.Parent = MainGUI
+Deposit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Deposit.BackgroundTransparency = 0.750
+Deposit.BorderSizePixel = 0
+Deposit.Position = UDim2.new(0.598901093, 0, 0.144654095, 0)
+Deposit.Size = UDim2.new(0, 138, 0, 50)
+Deposit.ZIndex = 99
+Deposit.Font = Enum.Font.SourceSans
+Deposit.Text = "Deposit"
+Deposit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Deposit.TextSize = 14.000
+Deposit.TextWrapped = true
+
+TextButton.Parent = MainGUI
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.428571433, 0, 0.509433925, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.ZIndex = 99
+TextButton.Font = Enum.Font.SourceSans
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+Financer.Name = "Financer"
+Financer.Parent = MainGUI
+Financer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Financer.BackgroundTransparency = 0.750
+Financer.BorderSizePixel = 0
+Financer.Position = UDim2.new(0.0192307699, 0, 0.509433985, 0)
+Financer.Size = UDim2.new(0, 140, 0, 50)
+Financer.ZIndex = 99
+Financer.Font = Enum.Font.SourceSans
+Financer.Text = "Withdrawal"
+Financer.TextColor3 = Color3.fromRGB(0, 0, 0)
+Financer.TextSize = 14.000
+Financer.TextWrapped = true
 
 DepositFrame.Name = "DepositFrame"
 DepositFrame.Parent = EPGUI
@@ -233,19 +278,19 @@ UpStairsCameras.TextScaled = true
 UpStairsCameras.TextSize = 14.000
 UpStairsCameras.TextWrapped = true
 
-Van_2.Name = "Van"
-Van_2.Parent = DepositFrame
-Van_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Van_2.BackgroundTransparency = 1.000
-Van_2.BorderSizePixel = 0
-Van_2.Position = UDim2.new(0.056034483, 0, 0.538105845, 0)
-Van_2.Size = UDim2.new(0, 200, 0, 50)
-Van_2.Font = Enum.Font.SourceSans
-Van_2.Text = "Van"
-Van_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Van_2.TextScaled = true
-Van_2.TextSize = 14.000
-Van_2.TextWrapped = true
+Van.Name = "Van"
+Van.Parent = DepositFrame
+Van.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Van.BackgroundTransparency = 1.000
+Van.BorderSizePixel = 0
+Van.Position = UDim2.new(0.056034483, 0, 0.538105845, 0)
+Van.Size = UDim2.new(0, 200, 0, 50)
+Van.Font = Enum.Font.SourceSans
+Van.Text = "Van"
+Van.TextColor3 = Color3.fromRGB(0, 0, 0)
+Van.TextScaled = true
+Van.TextSize = 14.000
+Van.TextWrapped = true
 
 AccManager.Name = "AccManager"
 AccManager.Parent = DepositFrame
@@ -288,320 +333,113 @@ REMOVESENSORS.TextScaled = true
 REMOVESENSORS.TextSize = 14.000
 REMOVESENSORS.TextWrapped = true
 
-BlacksiteFrame.Name = "BlacksiteFrame"
-BlacksiteFrame.Parent = EPGUI
-BlacksiteFrame.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-BlacksiteFrame.Position = UDim2.new(0.744727552, 0, 0.191915751, 0)
-BlacksiteFrame.Size = UDim2.new(0, 232, 0, 209)
-BlacksiteFrame.Visible = false
+WithdrawalFrame.Name = "WithdrawalFrame"
+WithdrawalFrame.Parent = EPGUI
+WithdrawalFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WithdrawalFrame.BackgroundTransparency = 1.000
+WithdrawalFrame.Position = UDim2.new(0.744727552, 0, 0.191915765, 0)
+WithdrawalFrame.Size = UDim2.new(0, 232, 0, 386)
+WithdrawalFrame.Visible = false
+WithdrawalFrame.ZIndex = 100
 
-TextLabel_3.Parent = BlacksiteFrame
+TextLabel_3.Parent = WithdrawalFrame
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.Position = UDim2.new(0.056034483, 0, -0.00632911408, 0)
 TextLabel_3.Size = UDim2.new(0, 200, 0, 39)
-TextLabel_3.Font = Enum.Font.SciFi
-TextLabel_3.Text = "Blacksite (TPS)"
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Withdrawal (TPS)"
 TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_3.TextScaled = true
 TextLabel_3.TextSize = 14.000
 TextLabel_3.TextWrapped = true
 
-ControlRoom.Name = "Control Room"
-ControlRoom.Parent = BlacksiteFrame
-ControlRoom.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ControlRoom.BackgroundTransparency = 1.000
-ControlRoom.BorderSizePixel = 0
-ControlRoom.Position = UDim2.new(0.068965517, 0, 0.176626325, 0)
-ControlRoom.Size = UDim2.new(0, 200, 0, 50)
-ControlRoom.Font = Enum.Font.SciFi
-ControlRoom.Text = "Control room (BEHIND GUARD)"
-ControlRoom.TextColor3 = Color3.fromRGB(0, 0, 0)
-ControlRoom.TextScaled = true
-ControlRoom.TextSize = 14.000
-ControlRoom.TextWrapped = true
-
 CLOSE_3.Name = "CLOSE"
-CLOSE_3.Parent = BlacksiteFrame
+CLOSE_3.Parent = WithdrawalFrame
 CLOSE_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CLOSE_3.BackgroundTransparency = 1.000
-CLOSE_3.Position = UDim2.new(0.331896544, 0, -0.247353554, 0)
-CLOSE_3.Size = UDim2.new(0, 78, 0, 50)
-CLOSE_3.Font = Enum.Font.SciFi
+CLOSE_3.Position = UDim2.new(0.056034483, 0, -0.137305707, 0)
+CLOSE_3.Size = UDim2.new(0, 200, 0, 50)
+CLOSE_3.Font = Enum.Font.SourceSans
 CLOSE_3.Text = "Close"
 CLOSE_3.TextColor3 = Color3.fromRGB(255, 0, 0)
 CLOSE_3.TextScaled = true
 CLOSE_3.TextSize = 14.000
 CLOSE_3.TextWrapped = true
 
-CargoCamera.Name = "Cargo Camera"
-CargoCamera.Parent = BlacksiteFrame
-CargoCamera.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CargoCamera.BackgroundTransparency = 1.000
-CargoCamera.BorderSizePixel = 0
-CargoCamera.Position = UDim2.new(0.068965517, 0, 0.690521777, 0)
-CargoCamera.Size = UDim2.new(0, 200, 0, 50)
-CargoCamera.Font = Enum.Font.SciFi
-CargoCamera.Text = "Cargo Cameras"
-CargoCamera.TextColor3 = Color3.fromRGB(0, 0, 0)
-CargoCamera.TextScaled = true
-CargoCamera.TextSize = 14.000
-CargoCamera.TextWrapped = true
+Vdoor1.Name = "Vdoor1"
+Vdoor1.Parent = WithdrawalFrame
+Vdoor1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Vdoor1.BackgroundTransparency = 1.000
+Vdoor1.BorderSizePixel = 0
+Vdoor1.Position = UDim2.new(0.0603448302, 0, 0.53551513, 0)
+Vdoor1.Size = UDim2.new(0, 200, 0, 50)
+Vdoor1.Font = Enum.Font.SourceSans
+Vdoor1.Text = "Vdoor1"
+Vdoor1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Vdoor1.TextScaled = true
+Vdoor1.TextSize = 14.000
+Vdoor1.TextWrapped = true
 
-Sewers.Name = "Sewers"
-Sewers.Parent = BlacksiteFrame
-Sewers.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Sewers.BackgroundTransparency = 1.000
-Sewers.BorderSizePixel = 0
-Sewers.Position = UDim2.new(0.068965517, 0, 0.451634377, 0)
-Sewers.Size = UDim2.new(0, 200, 0, 50)
-Sewers.Font = Enum.Font.SciFi
-Sewers.Text = "Sewers"
-Sewers.TextColor3 = Color3.fromRGB(0, 0, 0)
-Sewers.TextScaled = true
-Sewers.TextSize = 14.000
-Sewers.TextWrapped = true
+Vault.Name = "Vault"
+Vault.Parent = WithdrawalFrame
+Vault.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Vault.BackgroundTransparency = 1.000
+Vault.BorderSizePixel = 0
+Vault.Position = UDim2.new(0.0560344867, 0, 0.123598054, 0)
+Vault.Size = UDim2.new(0, 200, 0, 50)
+Vault.Font = Enum.Font.SourceSans
+Vault.Text = "Vault"
+Vault.TextColor3 = Color3.fromRGB(0, 0, 0)
+Vault.TextScaled = true
+Vault.TextSize = 14.000
+Vault.TextWrapped = true
 
-MainGui.Name = "MainGui"
-MainGui.Parent = EPGUI
-MainGui.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-MainGui.Position = UDim2.new(0.722039819, 0, 0.328327954, 0)
-MainGui.Size = UDim2.new(0, 253, 0, 333)
+Cams.Name = "Cams"
+Cams.Parent = WithdrawalFrame
+Cams.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cams.BackgroundTransparency = 1.000
+Cams.BorderSizePixel = 0
+Cams.Position = UDim2.new(0.0474137962, 0, 0.255722404, 0)
+Cams.Size = UDim2.new(0, 200, 0, 50)
+Cams.Font = Enum.Font.SourceSans
+Cams.Text = "Cams"
+Cams.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cams.TextScaled = true
+Cams.TextSize = 14.000
+Cams.TextWrapped = true
 
-UICorner.Parent = MainGui
+Vdoor2.Name = "Vdoor2"
+Vdoor2.Parent = WithdrawalFrame
+Vdoor2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Vdoor2.BackgroundTransparency = 1.000
+Vdoor2.BorderSizePixel = 0
+Vdoor2.Position = UDim2.new(0.0474137962, 0, 0.403390825, 0)
+Vdoor2.Size = UDim2.new(0, 200, 0, 50)
+Vdoor2.Font = Enum.Font.SourceSans
+Vdoor2.Text = "Vdoor2"
+Vdoor2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Vdoor2.TextScaled = true
+Vdoor2.TextSize = 14.000
+Vdoor2.TextWrapped = true
 
-ImageLabel.Parent = MainGui
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.Position = UDim2.new(0.135821804, 0, 0.90897727, 0)
-ImageLabel.Size = UDim2.new(0, 184, 0, 30)
-ImageLabel.Image = "rbxassetid://8365693006"
-
-Blacksite.Name = "Blacksite"
-Blacksite.Parent = MainGui
-Blacksite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Blacksite.BackgroundTransparency = 0.750
-Blacksite.BorderSizePixel = 0
-Blacksite.Position = UDim2.new(0.137807727, 0, 0.0752459466, 0)
-Blacksite.Size = UDim2.new(0, 182, 0, 41)
-Blacksite.ZIndex = 99
-Blacksite.Font = Enum.Font.SciFi
-Blacksite.Text = "Blacksite"
-Blacksite.TextColor3 = Color3.fromRGB(0, 0, 0)
-Blacksite.TextSize = 20.000
-Blacksite.TextWrapped = true
-
-Deposit.Name = "Deposit"
-Deposit.Parent = MainGui
-Deposit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Deposit.BackgroundTransparency = 0.750
-Deposit.BorderSizePixel = 0
-Deposit.Position = UDim2.new(0.13792643, 0, 0.199343234, 0)
-Deposit.Size = UDim2.new(0, 182, 0, 41)
-Deposit.ZIndex = 99
-Deposit.Font = Enum.Font.SciFi
-Deposit.Text = "Deposit"
-Deposit.TextColor3 = Color3.fromRGB(0, 0, 0)
-Deposit.TextSize = 20.000
-Deposit.TextWrapped = true
-
-Scientist.Name = "Scientist"
-Scientist.Parent = MainGui
-Scientist.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Scientist.BackgroundTransparency = 0.750
-Scientist.BorderSizePixel = 0
-Scientist.Position = UDim2.new(0.138509765, 0, 0.325168967, 0)
-Scientist.Size = UDim2.new(0, 182, 0, 41)
-Scientist.ZIndex = 99
-Scientist.Font = Enum.Font.SciFi
-Scientist.Text = "Scientist"
-Scientist.TextColor3 = Color3.fromRGB(0, 0, 0)
-Scientist.TextSize = 20.000
-Scientist.TextWrapped = true
-
-Withdrawal.Name = "Withdrawal"
-Withdrawal.Parent = MainGui
-Withdrawal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Withdrawal.BackgroundTransparency = 0.750
-Withdrawal.BorderSizePixel = 0
-Withdrawal.Position = UDim2.new(0.137807712, 0, 0.449266255, 0)
-Withdrawal.Size = UDim2.new(0, 182, 0, 41)
-Withdrawal.ZIndex = 99
-Withdrawal.Font = Enum.Font.SciFi
-Withdrawal.Text = "Withdrawal"
-Withdrawal.TextColor3 = Color3.fromRGB(0, 0, 0)
-Withdrawal.TextSize = 20.000
-Withdrawal.TextWrapped = true
+ServRoom.Name = "ServRoom"
+ServRoom.Parent = WithdrawalFrame
+ServRoom.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ServRoom.BackgroundTransparency = 1.000
+ServRoom.BorderSizePixel = 0
+ServRoom.Position = UDim2.new(0.0474137962, 0, 0.678002179, 0)
+ServRoom.Size = UDim2.new(0, 200, 0, 50)
+ServRoom.Font = Enum.Font.SourceSans
+ServRoom.Text = "ServRoom"
+ServRoom.TextColor3 = Color3.fromRGB(0, 0, 0)
+ServRoom.TextScaled = true
+ServRoom.TextSize = 14.000
+ServRoom.TextWrapped = true
 
 -- Scripts:
 
-local function VDRYY_fake_script() -- CLOSE.LocalScript 
-	local script = Instance.new('LocalScript', CLOSE)
-
-	script.Parent.Activated:Connect(function()
-		script.Parent.Parent.Visible = false
-		script.Parent.Parent.Parent.MainGUI.Visible = true
-	end)
-end
-coroutine.wrap(VDRYY_fake_script)()
-local function CBOXK_fake_script() -- Cams.LocalScript 
-	local script = Instance.new('LocalScript', Cams)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Level.Geometry.SecurityRoom.GuardSpot.CFrame
-	end)
-		
-	
-	
-end
-coroutine.wrap(CBOXK_fake_script)()
-local function MDJBY_fake_script() -- ServerRoom.LocalScript 
-	local script = Instance.new('LocalScript', ServerRoom)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Level.Geometry.ServerRoom.FindTrigger
-	end)
-		
-	
-	
-end
-coroutine.wrap(MDJBY_fake_script)()
-local function EJMHHU_fake_script() -- Van.LocalScript 
-	local script = Instance.new('LocalScript', Van)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-34.387, 2.43, 18.178)
-	end)
-		
-	
-	
-end
-coroutine.wrap(EJMHHU_fake_script)()
-local function DLMT_fake_script() -- Vault.LocalScript 
-	local script = Instance.new('LocalScript', Vault)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(77.245, 1.4, 52.337)
-	end)
-		
-	
-	
-end
-coroutine.wrap(DLMT_fake_script)()
-local function WLVB_fake_script() -- DownStairsCameras.LocalScript 
-	local script = Instance.new('LocalScript', DownStairsCameras)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(157.186, 172.8, -71.157)
-	end)
-		
-	
-	
-end
-coroutine.wrap(WLVB_fake_script)()
-local function TZLCOXX_fake_script() -- CLOSE_2.LocalScript 
-	local script = Instance.new('LocalScript', CLOSE_2)
-
-	script.Parent.Activated:Connect(function()
-		script.Parent.Parent.Visible = false
-		script.Parent.Parent.Parent.MainGUI.Visible = true
-	end)
-end
-coroutine.wrap(TZLCOXX_fake_script)()
-local function DZIF_fake_script() -- ManagerPC.LocalScript 
-	local script = Instance.new('LocalScript', ManagerPC)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(186.364, 204, -22.381)
-	end)
-		
-	
-	
-end
-coroutine.wrap(DZIF_fake_script)()
-local function PVINTMS_fake_script() -- UpStairsCameras.LocalScript 
-	local script = Instance.new('LocalScript', UpStairsCameras)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(207.398, 204, -28.695)
-	end)
-		
-	
-	
-end
-coroutine.wrap(PVINTMS_fake_script)()
-local function FCEY_fake_script() -- Van_2.LocalScript 
-	local script = Instance.new('LocalScript', Van_2)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(177.502, 186.62, 72.962)
-	end)
-		
-	
-	
-end
-coroutine.wrap(FCEY_fake_script)()
-local function MTOWOT_fake_script() -- AccManager.LocalScript 
-	local script = Instance.new('LocalScript', AccManager)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Level.Triggers.VisionFiltered.AccManager.CFrame
-	end)
-		
-	
-	
-end
-coroutine.wrap(MTOWOT_fake_script)()
-local function WRLHXHA_fake_script() -- Archives.LocalScript 
-	local script = Instance.new('LocalScript', Archives)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.Level.Geometry.ArchivesFurniture.Part.CFrame.X, game.Workspace.Level.Geometry.ArchivesFurniture.Part.CFrame.Y + 10, game.Workspace.Level.Geometry.ArchivesFurniture.Part.CFrame.Z)
-	end)
-		
-	
-	
-end
-coroutine.wrap(WRLHXHA_fake_script)()
-local function OCTQX_fake_script() -- REMOVESENSORS.LocalScript 
-	local script = Instance.new('LocalScript', REMOVESENSORS)
-
-	script.Parent.Activated:Connect(function()
-	game.Level.Triggers.SensorZone:Destroy()
-	end)
-end
-coroutine.wrap(OCTQX_fake_script)()
-local function SMNFD_fake_script() -- ControlRoom.LocalScript 
+local function HZEVP_fake_script() -- ControlRoom.LocalScript 
 	local script = Instance.new('LocalScript', ControlRoom)
 
 	
@@ -614,17 +452,17 @@ local function SMNFD_fake_script() -- ControlRoom.LocalScript
 	
 	
 end
-coroutine.wrap(SMNFD_fake_script)()
-local function YXZDO_fake_script() -- CLOSE_3.LocalScript 
-	local script = Instance.new('LocalScript', CLOSE_3)
+coroutine.wrap(HZEVP_fake_script)()
+local function WUCYM_fake_script() -- CLOSE.LocalScript 
+	local script = Instance.new('LocalScript', CLOSE)
 
 	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Visible = false
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(YXZDO_fake_script)()
-local function ZCKYST_fake_script() -- CargoCamera.LocalScript 
+coroutine.wrap(WUCYM_fake_script)()
+local function CLNJSFR_fake_script() -- CargoCamera.LocalScript 
 	local script = Instance.new('LocalScript', CargoCamera)
 
 	
@@ -637,8 +475,8 @@ local function ZCKYST_fake_script() -- CargoCamera.LocalScript
 	
 	
 end
-coroutine.wrap(ZCKYST_fake_script)()
-local function JMBUI_fake_script() -- Sewers.LocalScript 
+coroutine.wrap(CLNJSFR_fake_script)()
+local function SEXB_fake_script() -- Sewers.LocalScript 
 	local script = Instance.new('LocalScript', Sewers)
 
 	
@@ -651,8 +489,8 @@ local function JMBUI_fake_script() -- Sewers.LocalScript
 	
 	
 end
-coroutine.wrap(JMBUI_fake_script)()
-local function RAAUOM_fake_script() -- Blacksite.LocalScript 
+coroutine.wrap(SEXB_fake_script)()
+local function AOJPXYP_fake_script() -- Blacksite.LocalScript 
 	local script = Instance.new('LocalScript', Blacksite)
 
 	script.Parent.Activated:Connect(function()
@@ -660,22 +498,200 @@ local function RAAUOM_fake_script() -- Blacksite.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(RAAUOM_fake_script)()
-local function DLZNLIS_fake_script() -- Deposit.LocalScript 
+coroutine.wrap(AOJPXYP_fake_script)()
+local function WBBD_fake_script() -- Deposit.LocalScript 
 	local script = Instance.new('LocalScript', Deposit)
 
 	script.Parent.Activated:Connect(function()
-		script.Parent.Parent.Paren.DepositFrame.Visible = true
+		script.Parent.Parent.Parent.DepositFrame.Visible = true
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(DLZNLIS_fake_script)()
-local function WXZJ_fake_script() -- Withdrawal.LocalScript 
-	local script = Instance.new('LocalScript', Withdrawal)
+coroutine.wrap(WBBD_fake_script)()
+local function ONFDC_fake_script() -- Financer.LocalScript 
+	local script = Instance.new('LocalScript', Financer)
 
 	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Parent.WithdrawalFrame.Visible = true
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(WXZJ_fake_script)()
+coroutine.wrap(ONFDC_fake_script)()
+local function LDXIFCZ_fake_script() -- DownStairsCameras.LocalScript 
+	local script = Instance.new('LocalScript', DownStairsCameras)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(157.186, 172.8, -71.157)
+	end)
+		
+	
+	
+end
+coroutine.wrap(LDXIFCZ_fake_script)()
+local function JIOD_fake_script() -- CLOSE_2.LocalScript 
+	local script = Instance.new('LocalScript', CLOSE_2)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.MainGUI.Visible = true
+	end)
+end
+coroutine.wrap(JIOD_fake_script)()
+local function OUFF_fake_script() -- ManagerPC.LocalScript 
+	local script = Instance.new('LocalScript', ManagerPC)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(186.364, 204, -22.381)
+	end)
+		
+	
+	
+end
+coroutine.wrap(OUFF_fake_script)()
+local function BUYNOUO_fake_script() -- UpStairsCameras.LocalScript 
+	local script = Instance.new('LocalScript', UpStairsCameras)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(207.398, 204, -28.695)
+	end)
+		
+	
+	
+end
+coroutine.wrap(BUYNOUO_fake_script)()
+local function TNOQEW_fake_script() -- Van.LocalScript 
+	local script = Instance.new('LocalScript', Van)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(177.502, 186.62, 72.962)
+	end)
+		
+	
+	
+end
+coroutine.wrap(TNOQEW_fake_script)()
+local function ZRGM_fake_script() -- AccManager.LocalScript 
+	local script = Instance.new('LocalScript', AccManager)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Level.Triggers.VisionFiltered.AccManager.CFrame
+	end)
+		
+	
+	
+end
+coroutine.wrap(ZRGM_fake_script)()
+local function OPIZAG_fake_script() -- Archives.LocalScript 
+	local script = Instance.new('LocalScript', Archives)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.Level.Geometry.ArchivesFurniture.Part.CFrame.X, game.Workspace.Level.Geometry.ArchivesFurniture.Part.CFrame.Y + 10, game.Workspace.Level.Geometry.ArchivesFurniture.Part.CFrame.Z)
+	end)
+		
+	
+	
+end
+coroutine.wrap(OPIZAG_fake_script)()
+local function SOEZOE_fake_script() -- REMOVESENSORS.LocalScript 
+	local script = Instance.new('LocalScript', REMOVESENSORS)
+
+	script.Parent.Activated:Connect(function()
+	game.Level.Triggers.SensorZone:Destroy()
+	end)
+end
+coroutine.wrap(SOEZOE_fake_script)()
+local function IGMZYQ_fake_script() -- CLOSE_3.LocalScript 
+	local script = Instance.new('LocalScript', CLOSE_3)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.MainGUI.Visible = true
+	end)
+end
+coroutine.wrap(IGMZYQ_fake_script)()
+local function QUTR_fake_script() -- Vdoor1.LocalScript 
+	local script = Instance.new('LocalScript', Vdoor1)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(71.91, 3.6, 71.759)
+	end)
+		
+	
+	
+end
+coroutine.wrap(QUTR_fake_script)()
+local function BMWP_fake_script() -- Vault.LocalScript 
+	local script = Instance.new('LocalScript', Vault)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76.927, 4.2, 52.45)
+	end)
+		
+	
+	
+end
+coroutine.wrap(BMWP_fake_script)()
+local function TFMIO_fake_script() -- Cams.LocalScript 
+	local script = Instance.new('LocalScript', Cams)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  game.Level.Geometry.ServerRoom.Computer.Center.CFrame
+	end)
+		
+	
+	
+end
+coroutine.wrap(TFMIO_fake_script)()
+local function ZXAZTJ_fake_script() -- Vdoor2.LocalScript 
+	local script = Instance.new('LocalScript', Vdoor2)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(71.91, 3.6, 33.159)
+	end)
+		
+	
+	
+end
+coroutine.wrap(ZXAZTJ_fake_script)()
+local function SKDXJT_fake_script() -- ServRoom.LocalScript 
+	local script = Instance.new('LocalScript', ServRoom)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Level.Geometry.ServerRoom.FindTrigger
+	end)
+	
+end
+coroutine.wrap(SKDXJT_fake_script)()
