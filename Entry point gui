@@ -30,14 +30,6 @@ end
 -- Instances:
 
 local EPGUI = Instance.new("ScreenGui")
-local Jscr = Instance.new("ScreenGui")
-local MainGui = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local ImageLabel = Instance.new("ImageLabel")
-local Blacksite = Instance.new("TextButton")
-local Deposit = Instance.new("TextButton")
-local Scientist = Instance.new("TextButton")
-local Withdrawal = Instance.new("TextButton")
 local WithdrawalFrame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local CLOSE = Instance.new("TextButton")
@@ -61,87 +53,19 @@ local ControlRoom = Instance.new("TextButton")
 local CLOSE_3 = Instance.new("TextButton")
 local CargoCamera = Instance.new("TextButton")
 local Sewers = Instance.new("TextButton")
+local MainGui = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local Blacksite = Instance.new("TextButton")
+local Deposit = Instance.new("TextButton")
+local Scientist = Instance.new("TextButton")
+local Withdrawal = Instance.new("TextButton")
 
 --Properties:
 
 EPGUI.Name = "EPGUI"
 EPGUI.Parent = game:GetService("CoreGui")
 EPGUI.ResetOnSpawn = false
-
-Jscr.Name = "Jscr"
-Jscr.Parent = EPGUI
-Jscr.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-MainGui.Name = "MainGui"
-MainGui.Parent = Jscr
-MainGui.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-MainGui.Position = UDim2.new(0.722039819, 0, 0.328327954, 0)
-MainGui.Size = UDim2.new(0, 253, 0, 333)
-
-UICorner.Parent = MainGui
-
-ImageLabel.Parent = MainGui
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.Position = UDim2.new(0.135821804, 0, 0.90897727, 0)
-ImageLabel.Size = UDim2.new(0, 184, 0, 30)
-ImageLabel.Image = "rbxassetid://8365693006"
-
-Blacksite.Name = "Blacksite"
-Blacksite.Parent = MainGui
-Blacksite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Blacksite.BackgroundTransparency = 0.750
-Blacksite.BorderSizePixel = 0
-Blacksite.Position = UDim2.new(0.137807727, 0, 0.0752459466, 0)
-Blacksite.Size = UDim2.new(0, 182, 0, 41)
-Blacksite.ZIndex = 99
-Blacksite.Font = Enum.Font.SciFi
-Blacksite.Text = "Blacksite"
-Blacksite.TextColor3 = Color3.fromRGB(0, 0, 0)
-Blacksite.TextSize = 20.000
-Blacksite.TextWrapped = true
-
-Deposit.Name = "Deposit"
-Deposit.Parent = MainGui
-Deposit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Deposit.BackgroundTransparency = 0.750
-Deposit.BorderSizePixel = 0
-Deposit.Position = UDim2.new(0.13792643, 0, 0.199343234, 0)
-Deposit.Size = UDim2.new(0, 182, 0, 41)
-Deposit.ZIndex = 99
-Deposit.Font = Enum.Font.SciFi
-Deposit.Text = "Deposit"
-Deposit.TextColor3 = Color3.fromRGB(0, 0, 0)
-Deposit.TextSize = 20.000
-Deposit.TextWrapped = true
-
-Scientist.Name = "Scientist"
-Scientist.Parent = MainGui
-Scientist.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Scientist.BackgroundTransparency = 0.750
-Scientist.BorderSizePixel = 0
-Scientist.Position = UDim2.new(0.138509765, 0, 0.325168967, 0)
-Scientist.Size = UDim2.new(0, 182, 0, 41)
-Scientist.ZIndex = 99
-Scientist.Font = Enum.Font.SciFi
-Scientist.Text = "Scientist"
-Scientist.TextColor3 = Color3.fromRGB(0, 0, 0)
-Scientist.TextSize = 20.000
-Scientist.TextWrapped = true
-
-Withdrawal.Name = "Withdrawal"
-Withdrawal.Parent = MainGui
-Withdrawal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Withdrawal.BackgroundTransparency = 0.750
-Withdrawal.BorderSizePixel = 0
-Withdrawal.Position = UDim2.new(0.137807712, 0, 0.449266255, 0)
-Withdrawal.Size = UDim2.new(0, 182, 0, 41)
-Withdrawal.ZIndex = 99
-Withdrawal.Font = Enum.Font.SciFi
-Withdrawal.Text = "Withdrawal"
-Withdrawal.TextColor3 = Color3.fromRGB(0, 0, 0)
-Withdrawal.TextSize = 20.000
-Withdrawal.TextWrapped = true
 
 WithdrawalFrame.Name = "WithdrawalFrame"
 WithdrawalFrame.Parent = EPGUI
@@ -438,45 +362,89 @@ Sewers.TextScaled = true
 Sewers.TextSize = 14.000
 Sewers.TextWrapped = true
 
+MainGui.Name = "MainGui"
+MainGui.Parent = EPGUI
+MainGui.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+MainGui.Position = UDim2.new(0.722039819, 0, 0.328327954, 0)
+MainGui.Size = UDim2.new(0, 253, 0, 333)
+
+UICorner.Parent = MainGui
+
+ImageLabel.Parent = MainGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.135821804, 0, 0.90897727, 0)
+ImageLabel.Size = UDim2.new(0, 184, 0, 30)
+ImageLabel.Image = "rbxassetid://8365693006"
+
+Blacksite.Name = "Blacksite"
+Blacksite.Parent = MainGui
+Blacksite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Blacksite.BackgroundTransparency = 0.750
+Blacksite.BorderSizePixel = 0
+Blacksite.Position = UDim2.new(0.137807727, 0, 0.0752459466, 0)
+Blacksite.Size = UDim2.new(0, 182, 0, 41)
+Blacksite.ZIndex = 99
+Blacksite.Font = Enum.Font.SciFi
+Blacksite.Text = "Blacksite"
+Blacksite.TextColor3 = Color3.fromRGB(0, 0, 0)
+Blacksite.TextSize = 20.000
+Blacksite.TextWrapped = true
+
+Deposit.Name = "Deposit"
+Deposit.Parent = MainGui
+Deposit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Deposit.BackgroundTransparency = 0.750
+Deposit.BorderSizePixel = 0
+Deposit.Position = UDim2.new(0.13792643, 0, 0.199343234, 0)
+Deposit.Size = UDim2.new(0, 182, 0, 41)
+Deposit.ZIndex = 99
+Deposit.Font = Enum.Font.SciFi
+Deposit.Text = "Deposit"
+Deposit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Deposit.TextSize = 20.000
+Deposit.TextWrapped = true
+
+Scientist.Name = "Scientist"
+Scientist.Parent = MainGui
+Scientist.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Scientist.BackgroundTransparency = 0.750
+Scientist.BorderSizePixel = 0
+Scientist.Position = UDim2.new(0.138509765, 0, 0.325168967, 0)
+Scientist.Size = UDim2.new(0, 182, 0, 41)
+Scientist.ZIndex = 99
+Scientist.Font = Enum.Font.SciFi
+Scientist.Text = "Scientist"
+Scientist.TextColor3 = Color3.fromRGB(0, 0, 0)
+Scientist.TextSize = 20.000
+Scientist.TextWrapped = true
+
+Withdrawal.Name = "Withdrawal"
+Withdrawal.Parent = MainGui
+Withdrawal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Withdrawal.BackgroundTransparency = 0.750
+Withdrawal.BorderSizePixel = 0
+Withdrawal.Position = UDim2.new(0.137807712, 0, 0.449266255, 0)
+Withdrawal.Size = UDim2.new(0, 182, 0, 41)
+Withdrawal.ZIndex = 99
+Withdrawal.Font = Enum.Font.SciFi
+Withdrawal.Text = "Withdrawal"
+Withdrawal.TextColor3 = Color3.fromRGB(0, 0, 0)
+Withdrawal.TextSize = 20.000
+Withdrawal.TextWrapped = true
+
 -- Scripts:
 
-local function RJQQJEJ_fake_script() -- Blacksite.LocalScript 
-	local script = Instance.new('LocalScript', Blacksite)
-
-	script.Parent.Activated:Connect(function()
-		script.Parent.Parent.Parent.Parent.BlacksiteFrame.Visible = true
-		script.Parent.Parent.Visible = false
-	end)
-end
-coroutine.wrap(RJQQJEJ_fake_script)()
-local function FDPPVX_fake_script() -- Deposit.LocalScript 
-	local script = Instance.new('LocalScript', Deposit)
-
-	script.Parent.Activated:Connect(function()
-		script.Parent.Parent.Parent.Parent.DepositFrame.Visible = true
-		script.Parent.Parent.Visible = false
-	end)
-end
-coroutine.wrap(FDPPVX_fake_script)()
-local function GFKSN_fake_script() -- Withdrawal.LocalScript 
-	local script = Instance.new('LocalScript', Withdrawal)
-
-	script.Parent.Activated:Connect(function()
-		script.Parent.Parent.Parent.Parent.WithdrawalFrame.Visible = true
-		script.Parent.Parent.Visible = false
-	end)
-end
-coroutine.wrap(GFKSN_fake_script)()
-local function OMJFEXS_fake_script() -- CLOSE.LocalScript 
+local function VDRYY_fake_script() -- CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE)
 
 	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Visible = false
-		script.Parent.Parent.Parent.Jscr.MainGUI.Visible = true
+		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(OMJFEXS_fake_script)()
-local function CXXUWUW_fake_script() -- Cams.LocalScript 
+coroutine.wrap(VDRYY_fake_script)()
+local function CBOXK_fake_script() -- Cams.LocalScript 
 	local script = Instance.new('LocalScript', Cams)
 
 	
@@ -489,8 +457,8 @@ local function CXXUWUW_fake_script() -- Cams.LocalScript
 	
 	
 end
-coroutine.wrap(CXXUWUW_fake_script)()
-local function MJYGRS_fake_script() -- ServerRoom.LocalScript 
+coroutine.wrap(CBOXK_fake_script)()
+local function MDJBY_fake_script() -- ServerRoom.LocalScript 
 	local script = Instance.new('LocalScript', ServerRoom)
 
 	
@@ -503,8 +471,8 @@ local function MJYGRS_fake_script() -- ServerRoom.LocalScript
 	
 	
 end
-coroutine.wrap(MJYGRS_fake_script)()
-local function TLTPHEX_fake_script() -- Van.LocalScript 
+coroutine.wrap(MDJBY_fake_script)()
+local function EJMHHU_fake_script() -- Van.LocalScript 
 	local script = Instance.new('LocalScript', Van)
 
 	
@@ -517,8 +485,8 @@ local function TLTPHEX_fake_script() -- Van.LocalScript
 	
 	
 end
-coroutine.wrap(TLTPHEX_fake_script)()
-local function KGKU_fake_script() -- Vault.LocalScript 
+coroutine.wrap(EJMHHU_fake_script)()
+local function DLMT_fake_script() -- Vault.LocalScript 
 	local script = Instance.new('LocalScript', Vault)
 
 	
@@ -531,8 +499,8 @@ local function KGKU_fake_script() -- Vault.LocalScript
 	
 	
 end
-coroutine.wrap(KGKU_fake_script)()
-local function HVQE_fake_script() -- DownStairsCameras.LocalScript 
+coroutine.wrap(DLMT_fake_script)()
+local function WLVB_fake_script() -- DownStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', DownStairsCameras)
 
 	
@@ -545,17 +513,17 @@ local function HVQE_fake_script() -- DownStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(HVQE_fake_script)()
-local function PXATJBO_fake_script() -- CLOSE_2.LocalScript 
+coroutine.wrap(WLVB_fake_script)()
+local function TZLCOXX_fake_script() -- CLOSE_2.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_2)
 
 	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Visible = false
-		script.Parent.Parent.Parent.Jscr.MainGUI.Visible = true
+		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(PXATJBO_fake_script)()
-local function QPPS_fake_script() -- ManagerPC.LocalScript 
+coroutine.wrap(TZLCOXX_fake_script)()
+local function DZIF_fake_script() -- ManagerPC.LocalScript 
 	local script = Instance.new('LocalScript', ManagerPC)
 
 	
@@ -568,8 +536,8 @@ local function QPPS_fake_script() -- ManagerPC.LocalScript
 	
 	
 end
-coroutine.wrap(QPPS_fake_script)()
-local function UTOCG_fake_script() -- UpStairsCameras.LocalScript 
+coroutine.wrap(DZIF_fake_script)()
+local function PVINTMS_fake_script() -- UpStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', UpStairsCameras)
 
 	
@@ -582,8 +550,8 @@ local function UTOCG_fake_script() -- UpStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(UTOCG_fake_script)()
-local function XHACHN_fake_script() -- Van_2.LocalScript 
+coroutine.wrap(PVINTMS_fake_script)()
+local function FCEY_fake_script() -- Van_2.LocalScript 
 	local script = Instance.new('LocalScript', Van_2)
 
 	
@@ -596,8 +564,8 @@ local function XHACHN_fake_script() -- Van_2.LocalScript
 	
 	
 end
-coroutine.wrap(XHACHN_fake_script)()
-local function DJOMZMX_fake_script() -- AccManager.LocalScript 
+coroutine.wrap(FCEY_fake_script)()
+local function MTOWOT_fake_script() -- AccManager.LocalScript 
 	local script = Instance.new('LocalScript', AccManager)
 
 	
@@ -610,8 +578,8 @@ local function DJOMZMX_fake_script() -- AccManager.LocalScript
 	
 	
 end
-coroutine.wrap(DJOMZMX_fake_script)()
-local function SLRBVZ_fake_script() -- Archives.LocalScript 
+coroutine.wrap(MTOWOT_fake_script)()
+local function WRLHXHA_fake_script() -- Archives.LocalScript 
 	local script = Instance.new('LocalScript', Archives)
 
 	
@@ -624,16 +592,16 @@ local function SLRBVZ_fake_script() -- Archives.LocalScript
 	
 	
 end
-coroutine.wrap(SLRBVZ_fake_script)()
-local function VLNLFP_fake_script() -- REMOVESENSORS.LocalScript 
+coroutine.wrap(WRLHXHA_fake_script)()
+local function OCTQX_fake_script() -- REMOVESENSORS.LocalScript 
 	local script = Instance.new('LocalScript', REMOVESENSORS)
 
 	script.Parent.Activated:Connect(function()
 	game.Level.Triggers.SensorZone:Destroy()
 	end)
 end
-coroutine.wrap(VLNLFP_fake_script)()
-local function DUZYXQB_fake_script() -- ControlRoom.LocalScript 
+coroutine.wrap(OCTQX_fake_script)()
+local function SMNFD_fake_script() -- ControlRoom.LocalScript 
 	local script = Instance.new('LocalScript', ControlRoom)
 
 	
@@ -646,17 +614,17 @@ local function DUZYXQB_fake_script() -- ControlRoom.LocalScript
 	
 	
 end
-coroutine.wrap(DUZYXQB_fake_script)()
-local function XHDRFGD_fake_script() -- CLOSE_3.LocalScript 
+coroutine.wrap(SMNFD_fake_script)()
+local function YXZDO_fake_script() -- CLOSE_3.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_3)
 
 	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Visible = false
-		script.Parent.Parent.Parent.Jscr.MainGUI.Visible = true
+		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(XHDRFGD_fake_script)()
-local function FBKKA_fake_script() -- CargoCamera.LocalScript 
+coroutine.wrap(YXZDO_fake_script)()
+local function ZCKYST_fake_script() -- CargoCamera.LocalScript 
 	local script = Instance.new('LocalScript', CargoCamera)
 
 	
@@ -669,8 +637,8 @@ local function FBKKA_fake_script() -- CargoCamera.LocalScript
 	
 	
 end
-coroutine.wrap(FBKKA_fake_script)()
-local function OXGZER_fake_script() -- Sewers.LocalScript 
+coroutine.wrap(ZCKYST_fake_script)()
+local function JMBUI_fake_script() -- Sewers.LocalScript 
 	local script = Instance.new('LocalScript', Sewers)
 
 	
@@ -683,4 +651,31 @@ local function OXGZER_fake_script() -- Sewers.LocalScript
 	
 	
 end
-coroutine.wrap(OXGZER_fake_script)()
+coroutine.wrap(JMBUI_fake_script)()
+local function RAAUOM_fake_script() -- Blacksite.LocalScript 
+	local script = Instance.new('LocalScript', Blacksite)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.BlacksiteFrame.Visible = true
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(RAAUOM_fake_script)()
+local function DLZNLIS_fake_script() -- Deposit.LocalScript 
+	local script = Instance.new('LocalScript', Deposit)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Paren.DepositFrame.Visible = true
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(DLZNLIS_fake_script)()
+local function WXZJ_fake_script() -- Withdrawal.LocalScript 
+	local script = Instance.new('LocalScript', Withdrawal)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.WithdrawalFrame.Visible = true
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(WXZJ_fake_script)()
