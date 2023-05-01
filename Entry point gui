@@ -1,4 +1,5 @@
 -- Version 1.3 --
+--[[
 Local ESP = false -- SET TO TRUE IF YOU WANT ESP
 if ESP == true then
 for i,v in pairs(game.Workspace.Level.Actors:GetChildren()) do
@@ -23,6 +24,7 @@ end
 elseif ESP == false then
 return
 end
+--]]
 -- Instances:
 local EPGUI = Instance.new("ScreenGui")
 local BlacksiteFrame = Instance.new("Frame")
