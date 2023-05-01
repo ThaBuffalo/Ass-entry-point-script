@@ -1,4 +1,4 @@
--- Version: 1.5
+-- Version: 1.6
 -- Instances:
 
 local EPGUI = Instance.new("ScreenGui")
@@ -20,13 +20,12 @@ local CLOSE_2 = Instance.new("TextButton")
 local ManagerPC = Instance.new("TextButton")
 local UpStairsCameras = Instance.new("TextButton")
 local Van = Instance.new("TextButton")
-local Archives = Instance.new("TextButton")
 local AccManager = Instance.new("TextButton")
 
 --Properties:
 
 EPGUI.Name = "EPGUI"
-EPGUI.Parent = game:GetService("CoreGui)
+EPGUI.Parent = game:GetService("CoreGui")
 EPGUI.ResetOnSpawn = false
 
 BlacksiteFrame.Name = "BlacksiteFrame"
@@ -124,6 +123,7 @@ Blacksite.Font = Enum.Font.SourceSans
 Blacksite.Text = "Blacksite"
 Blacksite.TextColor3 = Color3.fromRGB(0, 0, 0)
 Blacksite.TextSize = 14.000
+Blacksite.TextWrapped = true
 
 Deposit.Name = "Deposit"
 Deposit.Parent = MainGUI
@@ -137,6 +137,7 @@ Deposit.Font = Enum.Font.SourceSans
 Deposit.Text = "Deposit"
 Deposit.TextColor3 = Color3.fromRGB(0, 0, 0)
 Deposit.TextSize = 14.000
+Deposit.TextWrapped = true
 
 TextButton.Parent = MainGUI
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -147,6 +148,7 @@ TextButton.ZIndex = 99
 TextButton.Font = Enum.Font.SourceSans
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
 
 TextButton_2.Parent = MainGUI
 TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -157,6 +159,7 @@ TextButton_2.ZIndex = 99
 TextButton_2.Font = Enum.Font.SourceSans
 TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
 
 DepositFrame.Name = "DepositFrame"
 DepositFrame.Parent = EPGUI
@@ -248,20 +251,6 @@ Van.TextScaled = true
 Van.TextSize = 14.000
 Van.TextWrapped = true
 
-Archives.Name = "Archives"
-Archives.Parent = DepositFrame
-Archives.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Archives.BackgroundTransparency = 1.000
-Archives.BorderSizePixel = 0
-Archives.Position = UDim2.new(0.056034483, 0, 0.680592895, 0)
-Archives.Size = UDim2.new(0, 200, 0, 50)
-Archives.Font = Enum.Font.SourceSans
-Archives.Text = "Archives"
-Archives.TextColor3 = Color3.fromRGB(0, 0, 0)
-Archives.TextScaled = true
-Archives.TextSize = 14.000
-Archives.TextWrapped = true
-
 AccManager.Name = "AccManager"
 AccManager.Parent = DepositFrame
 AccManager.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -278,7 +267,7 @@ AccManager.TextWrapped = true
 
 -- Scripts:
 
-local function QNZCKW_fake_script() -- ControlRoom.LocalScript 
+local function KGLE_fake_script() -- ControlRoom.LocalScript 
 	local script = Instance.new('LocalScript', ControlRoom)
 
 	
@@ -291,8 +280,8 @@ local function QNZCKW_fake_script() -- ControlRoom.LocalScript
 	
 	
 end
-coroutine.wrap(QNZCKW_fake_script)()
-local function VCPNOZV_fake_script() -- CLOSE.LocalScript 
+coroutine.wrap(KGLE_fake_script)()
+local function BZCTNX_fake_script() -- CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE)
 
 	script.Parent.Activated:Connect(function()
@@ -300,8 +289,8 @@ local function VCPNOZV_fake_script() -- CLOSE.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(VCPNOZV_fake_script)()
-local function IUDRCW_fake_script() -- CargoCamera.LocalScript 
+coroutine.wrap(BZCTNX_fake_script)()
+local function WLJJY_fake_script() -- CargoCamera.LocalScript 
 	local script = Instance.new('LocalScript', CargoCamera)
 
 	
@@ -314,8 +303,8 @@ local function IUDRCW_fake_script() -- CargoCamera.LocalScript
 	
 	
 end
-coroutine.wrap(IUDRCW_fake_script)()
-local function SQPFHX_fake_script() -- Sewers.LocalScript 
+coroutine.wrap(WLJJY_fake_script)()
+local function EBCY_fake_script() -- Sewers.LocalScript 
 	local script = Instance.new('LocalScript', Sewers)
 
 	
@@ -328,8 +317,8 @@ local function SQPFHX_fake_script() -- Sewers.LocalScript
 	
 	
 end
-coroutine.wrap(SQPFHX_fake_script)()
-local function LWQS_fake_script() -- Blacksite.LocalScript 
+coroutine.wrap(EBCY_fake_script)()
+local function BEDOI_fake_script() -- Blacksite.LocalScript 
 	local script = Instance.new('LocalScript', Blacksite)
 
 	script.Parent.Activated:Connect(function()
@@ -337,8 +326,8 @@ local function LWQS_fake_script() -- Blacksite.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(LWQS_fake_script)()
-local function KCYA_fake_script() -- Deposit.LocalScript 
+coroutine.wrap(BEDOI_fake_script)()
+local function DRCKRJC_fake_script() -- Deposit.LocalScript 
 	local script = Instance.new('LocalScript', Deposit)
 
 	script.Parent.Activated:Connect(function()
@@ -346,8 +335,8 @@ local function KCYA_fake_script() -- Deposit.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KCYA_fake_script)()
-local function RDCN_fake_script() -- DownStairsCameras.LocalScript 
+coroutine.wrap(DRCKRJC_fake_script)()
+local function SHGPLBQ_fake_script() -- DownStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', DownStairsCameras)
 
 	
@@ -360,8 +349,8 @@ local function RDCN_fake_script() -- DownStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(RDCN_fake_script)()
-local function SLLTTGF_fake_script() -- CLOSE_2.LocalScript 
+coroutine.wrap(SHGPLBQ_fake_script)()
+local function ACXPQOS_fake_script() -- CLOSE_2.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_2)
 
 	script.Parent.Activated:Connect(function()
@@ -369,22 +358,22 @@ local function SLLTTGF_fake_script() -- CLOSE_2.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(SLLTTGF_fake_script)()
-local function TGUTS_fake_script() -- ManagerPC.LocalScript 
+coroutine.wrap(ACXPQOS_fake_script)()
+local function HIDF_fake_script() -- ManagerPC.LocalScript 
 	local script = Instance.new('LocalScript', ManagerPC)
 
 	
 	script.Parent.Activated:Connect(function()
 		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(186.364, 204, -22.381)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Level.Triggers.VisionFiltered.AccManager.CFrame
 	end)
 		
 	
 	
 end
-coroutine.wrap(TGUTS_fake_script)()
-local function IJSBD_fake_script() -- UpStairsCameras.LocalScript 
+coroutine.wrap(HIDF_fake_script)()
+local function XJMDSPU_fake_script() -- UpStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', UpStairsCameras)
 
 	
@@ -397,8 +386,8 @@ local function IJSBD_fake_script() -- UpStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(IJSBD_fake_script)()
-local function JRZOKQI_fake_script() -- Van.LocalScript 
+coroutine.wrap(XJMDSPU_fake_script)()
+local function GQTLVFA_fake_script() -- Van.LocalScript 
 	local script = Instance.new('LocalScript', Van)
 
 	
@@ -411,22 +400,8 @@ local function JRZOKQI_fake_script() -- Van.LocalScript
 	
 	
 end
-coroutine.wrap(JRZOKQI_fake_script)()
-local function NHPBSVD_fake_script() -- Archives.LocalScript 
-	local script = Instance.new('LocalScript', Archives)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.Level.Geometry.ArchivesFurniture.Part.CFrame.X, game.Workspace.Level.Geometry.ArchivesFurniture.Part.CFrame.Y + 10, game.Workspace.Level.Geometry.ArchivesFurniture.Part.CFrame.Z)
-	end)
-		
-	
-	
-end
-coroutine.wrap(NHPBSVD_fake_script)()
-local function EMZRZBX_fake_script() -- AccManager.LocalScript 
+coroutine.wrap(GQTLVFA_fake_script)()
+local function ROKBJEF_fake_script() -- AccManager.LocalScript 
 	local script = Instance.new('LocalScript', AccManager)
 
 	
@@ -439,4 +414,4 @@ local function EMZRZBX_fake_script() -- AccManager.LocalScript
 	
 	
 end
-coroutine.wrap(EMZRZBX_fake_script)()
+coroutine.wrap(ROKBJEF_fake_script)()
