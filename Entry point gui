@@ -1,4 +1,4 @@
--- Version: 2.1.Testupdate.3
+-- Version: 2.1.69 (NOT YET 2.2 LOSERS)
 local ESP = false -- set true for esp
 
 -- Esp credit goes to some script kiddy i found on the internet 
@@ -61,6 +61,7 @@ local Vdoor2 = Instance.new("TextButton")
 local ServerRoom = Instance.new("TextButton")
 local Basement = Instance.new("TextButton")
 local Van_2 = Instance.new("TextButton")
+local VdoorFront = Instance.new("TextButton")
 local LakeHouseFrame = Instance.new("Frame")
 local TextLabel_4 = Instance.new("TextLabel")
 local CLOSE_4 = Instance.new("TextButton")
@@ -477,6 +478,20 @@ Van_2.TextScaled = true
 Van_2.TextSize = 14.000
 Van_2.TextWrapped = true
 
+VdoorFront.Name = "VdoorFront"
+VdoorFront.Parent = WithdrawalFrame
+VdoorFront.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VdoorFront.BackgroundTransparency = 1.000
+VdoorFront.BorderSizePixel = 0
+VdoorFront.Position = UDim2.new(0.0258620717, 0, 0.955204248, 0)
+VdoorFront.Size = UDim2.new(0, 200, 0, 50)
+VdoorFront.Font = Enum.Font.SciFi
+VdoorFront.Text = "VdoorFront"
+VdoorFront.TextColor3 = Color3.fromRGB(0, 0, 0)
+VdoorFront.TextScaled = true
+VdoorFront.TextSize = 14.000
+VdoorFront.TextWrapped = true
+
 LakeHouseFrame.Name = "LakeHouseFrame"
 LakeHouseFrame.Parent = EPGUI
 LakeHouseFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -569,7 +584,7 @@ CamRoom.TextWrapped = true
 
 -- Scripts:
 
-local function YRJMU_fake_script() -- ControlRoom.LocalScript 
+local function MZNATM_fake_script() -- ControlRoom.LocalScript 
 	local script = Instance.new('LocalScript', ControlRoom)
 
 	
@@ -582,8 +597,8 @@ local function YRJMU_fake_script() -- ControlRoom.LocalScript
 	
 	
 end
-coroutine.wrap(YRJMU_fake_script)()
-local function NMHLMQ_fake_script() -- CLOSE.LocalScript 
+coroutine.wrap(MZNATM_fake_script)()
+local function CDBHXG_fake_script() -- CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE)
 
 	script.Parent.Activated:Connect(function()
@@ -591,8 +606,8 @@ local function NMHLMQ_fake_script() -- CLOSE.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(NMHLMQ_fake_script)()
-local function JKCYYAB_fake_script() -- CargoCamera.LocalScript 
+coroutine.wrap(CDBHXG_fake_script)()
+local function KGND_fake_script() -- CargoCamera.LocalScript 
 	local script = Instance.new('LocalScript', CargoCamera)
 
 	
@@ -605,8 +620,8 @@ local function JKCYYAB_fake_script() -- CargoCamera.LocalScript
 	
 	
 end
-coroutine.wrap(JKCYYAB_fake_script)()
-local function PTQLSR_fake_script() -- Sewers.LocalScript 
+coroutine.wrap(KGND_fake_script)()
+local function TXVLWK_fake_script() -- Sewers.LocalScript 
 	local script = Instance.new('LocalScript', Sewers)
 
 	
@@ -619,8 +634,8 @@ local function PTQLSR_fake_script() -- Sewers.LocalScript
 	
 	
 end
-coroutine.wrap(PTQLSR_fake_script)()
-local function NESMBX_fake_script() -- Blacksite.LocalScript 
+coroutine.wrap(TXVLWK_fake_script)()
+local function FDHXF_fake_script() -- Blacksite.LocalScript 
 	local script = Instance.new('LocalScript', Blacksite)
 
 	script.Parent.Activated:Connect(function()
@@ -628,8 +643,8 @@ local function NESMBX_fake_script() -- Blacksite.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(NESMBX_fake_script)()
-local function DSBF_fake_script() -- Deposit.LocalScript 
+coroutine.wrap(FDHXF_fake_script)()
+local function QTPLC_fake_script() -- Deposit.LocalScript 
 	local script = Instance.new('LocalScript', Deposit)
 
 	script.Parent.Activated:Connect(function()
@@ -637,8 +652,8 @@ local function DSBF_fake_script() -- Deposit.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(DSBF_fake_script)()
-local function UZSJBU_fake_script() -- LakeHouse.LocalScript 
+coroutine.wrap(QTPLC_fake_script)()
+local function SIETIN_fake_script() -- LakeHouse.LocalScript 
 	local script = Instance.new('LocalScript', LakeHouse)
 
 	script.Parent.Activated:Connect(function()
@@ -646,8 +661,8 @@ local function UZSJBU_fake_script() -- LakeHouse.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(UZSJBU_fake_script)()
-local function AJIG_fake_script() -- Withdrawal.LocalScript 
+coroutine.wrap(SIETIN_fake_script)()
+local function HBHAZMI_fake_script() -- Withdrawal.LocalScript 
 	local script = Instance.new('LocalScript', Withdrawal)
 
 	script.Parent.Activated:Connect(function()
@@ -655,8 +670,8 @@ local function AJIG_fake_script() -- Withdrawal.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(AJIG_fake_script)()
-local function UJBBIA_fake_script() -- DownStairsCameras.LocalScript 
+coroutine.wrap(HBHAZMI_fake_script)()
+local function PWHWX_fake_script() -- DownStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', DownStairsCameras)
 
 	
@@ -669,8 +684,8 @@ local function UJBBIA_fake_script() -- DownStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(UJBBIA_fake_script)()
-local function MZJZTQT_fake_script() -- CLOSE_2.LocalScript 
+coroutine.wrap(PWHWX_fake_script)()
+local function RFHBXO_fake_script() -- CLOSE_2.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_2)
 
 	script.Parent.Activated:Connect(function()
@@ -678,8 +693,8 @@ local function MZJZTQT_fake_script() -- CLOSE_2.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(MZJZTQT_fake_script)()
-local function RXWS_fake_script() -- ManagerPC.LocalScript 
+coroutine.wrap(RFHBXO_fake_script)()
+local function LWGRECW_fake_script() -- ManagerPC.LocalScript 
 	local script = Instance.new('LocalScript', ManagerPC)
 
 	
@@ -692,8 +707,8 @@ local function RXWS_fake_script() -- ManagerPC.LocalScript
 	
 	
 end
-coroutine.wrap(RXWS_fake_script)()
-local function YFYS_fake_script() -- UpStairsCameras.LocalScript 
+coroutine.wrap(LWGRECW_fake_script)()
+local function AIWRFW_fake_script() -- UpStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', UpStairsCameras)
 
 	
@@ -706,8 +721,8 @@ local function YFYS_fake_script() -- UpStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(YFYS_fake_script)()
-local function BTZWY_fake_script() -- Van.LocalScript 
+coroutine.wrap(AIWRFW_fake_script)()
+local function ZZOHP_fake_script() -- Van.LocalScript 
 	local script = Instance.new('LocalScript', Van)
 
 	
@@ -720,8 +735,8 @@ local function BTZWY_fake_script() -- Van.LocalScript
 	
 	
 end
-coroutine.wrap(BTZWY_fake_script)()
-local function FFJXYF_fake_script() -- AccManager.LocalScript 
+coroutine.wrap(ZZOHP_fake_script)()
+local function ATPHBPF_fake_script() -- AccManager.LocalScript 
 	local script = Instance.new('LocalScript', AccManager)
 
 	
@@ -734,8 +749,8 @@ local function FFJXYF_fake_script() -- AccManager.LocalScript
 	
 	
 end
-coroutine.wrap(FFJXYF_fake_script)()
-local function KHQA_fake_script() -- Archives.LocalScript 
+coroutine.wrap(ATPHBPF_fake_script)()
+local function GZDZSB_fake_script() -- Archives.LocalScript 
 	local script = Instance.new('LocalScript', Archives)
 
 	
@@ -748,16 +763,16 @@ local function KHQA_fake_script() -- Archives.LocalScript
 	
 	
 end
-coroutine.wrap(KHQA_fake_script)()
-local function SHJOE_fake_script() -- REMOVESENSORS.LocalScript 
+coroutine.wrap(GZDZSB_fake_script)()
+local function IFAJ_fake_script() -- REMOVESENSORS.LocalScript 
 	local script = Instance.new('LocalScript', REMOVESENSORS)
 
 	script.Parent.Activated:Connect(function()
 	game.Level.Triggers.SensorZone:Destroy()
 	end)
 end
-coroutine.wrap(SHJOE_fake_script)()
-local function EKFZS_fake_script() -- CLOSE_3.LocalScript 
+coroutine.wrap(IFAJ_fake_script)()
+local function EDXOM_fake_script() -- CLOSE_3.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_3)
 
 	script.Parent.Activated:Connect(function()
@@ -765,8 +780,8 @@ local function EKFZS_fake_script() -- CLOSE_3.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(EKFZS_fake_script)()
-local function RRWWEN_fake_script() -- Vdoor1.LocalScript 
+coroutine.wrap(EDXOM_fake_script)()
+local function JZVERB_fake_script() -- Vdoor1.LocalScript 
 	local script = Instance.new('LocalScript', Vdoor1)
 
 	
@@ -779,8 +794,8 @@ local function RRWWEN_fake_script() -- Vdoor1.LocalScript
 	
 	
 end
-coroutine.wrap(RRWWEN_fake_script)()
-local function MDWOON_fake_script() -- Vault.LocalScript 
+coroutine.wrap(JZVERB_fake_script)()
+local function KFEM_fake_script() -- Vault.LocalScript 
 	local script = Instance.new('LocalScript', Vault)
 
 	
@@ -793,22 +808,22 @@ local function MDWOON_fake_script() -- Vault.LocalScript
 	
 	
 end
-coroutine.wrap(MDWOON_fake_script)()
-local function ALBYQ_fake_script() -- Cams.LocalScript 
+coroutine.wrap(KFEM_fake_script)()
+local function YHBBYP_fake_script() -- Cams.LocalScript 
 	local script = Instance.new('LocalScript', Cams)
 
 	
 	script.Parent.Activated:Connect(function()
 		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.Level.Triggers.CommandCenter.ToolIcon.CFrame.X,game.Workspace.Level.Triggers.CommandCenter.ToolIcon.CFrame.Y, game.Workspace.Level.Triggers.CommandCenter.ToolIcon.CFrame.Z-6)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.Level.Triggers.CommandCenter.ToolIcon.CFrame.X,game.Workspace.Level.Triggers.CommandCenter.ToolIcon.CFrame.Y, game.Workspace.Level.Triggers.CommandCenter.ToolIcon.CFrame.Z-4)
 	end)
 		
 	
 	
 end
-coroutine.wrap(ALBYQ_fake_script)()
-local function FHLFWO_fake_script() -- Vdoor2.LocalScript 
+coroutine.wrap(YHBBYP_fake_script)()
+local function DVKD_fake_script() -- Vdoor2.LocalScript 
 	local script = Instance.new('LocalScript', Vdoor2)
 
 	
@@ -821,8 +836,8 @@ local function FHLFWO_fake_script() -- Vdoor2.LocalScript
 	
 	
 end
-coroutine.wrap(FHLFWO_fake_script)()
-local function UFIVE_fake_script() -- ServerRoom.LocalScript 
+coroutine.wrap(DVKD_fake_script)()
+local function MMET_fake_script() -- ServerRoom.LocalScript 
 	local script = Instance.new('LocalScript', ServerRoom)
 
 	
@@ -836,8 +851,8 @@ local function UFIVE_fake_script() -- ServerRoom.LocalScript
 	
 	
 end
-coroutine.wrap(UFIVE_fake_script)()
-local function XNBVYM_fake_script() -- Basement.LocalScript 
+coroutine.wrap(MMET_fake_script)()
+local function VVTY_fake_script() -- Basement.LocalScript 
 	local script = Instance.new('LocalScript', Basement)
 
 	
@@ -850,8 +865,8 @@ local function XNBVYM_fake_script() -- Basement.LocalScript
 	
 	
 end
-coroutine.wrap(XNBVYM_fake_script)()
-local function JYYBYC_fake_script() -- Van_2.LocalScript 
+coroutine.wrap(VVTY_fake_script)()
+local function QVDN_fake_script() -- Van_2.LocalScript 
 	local script = Instance.new('LocalScript', Van_2)
 
 	
@@ -864,8 +879,22 @@ local function JYYBYC_fake_script() -- Van_2.LocalScript
 	
 	
 end
-coroutine.wrap(JYYBYC_fake_script)()
-local function ERPGZMN_fake_script() -- CLOSE_4.LocalScript 
+coroutine.wrap(QVDN_fake_script)()
+local function IXXX_fake_script() -- VdoorFront.LocalScript 
+	local script = Instance.new('LocalScript', VdoorFront)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(42.39, 1.6, 51.95)
+	end)
+		
+	
+	
+end
+coroutine.wrap(IXXX_fake_script)()
+local function RGTOB_fake_script() -- CLOSE_4.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_4)
 
 	script.Parent.Activated:Connect(function()
@@ -873,8 +902,8 @@ local function ERPGZMN_fake_script() -- CLOSE_4.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(ERPGZMN_fake_script)()
-local function HFOEYUE_fake_script() -- Powerbox.LocalScript 
+coroutine.wrap(RGTOB_fake_script)()
+local function EWEQZ_fake_script() -- Powerbox.LocalScript 
 	local script = Instance.new('LocalScript', Powerbox)
 
 	
@@ -887,8 +916,8 @@ local function HFOEYUE_fake_script() -- Powerbox.LocalScript
 	
 	
 end
-coroutine.wrap(HFOEYUE_fake_script)()
-local function DWGQCCR_fake_script() -- Basementdoor1.LocalScript 
+coroutine.wrap(EWEQZ_fake_script)()
+local function ENFHVG_fake_script() -- Basementdoor1.LocalScript 
 	local script = Instance.new('LocalScript', Basementdoor1)
 
 	
@@ -901,8 +930,8 @@ local function DWGQCCR_fake_script() -- Basementdoor1.LocalScript
 	
 	
 end
-coroutine.wrap(DWGQCCR_fake_script)()
-local function BVAUE_fake_script() -- Basementdoor2.LocalScript 
+coroutine.wrap(ENFHVG_fake_script)()
+local function WILDW_fake_script() -- Basementdoor2.LocalScript 
 	local script = Instance.new('LocalScript', Basementdoor2)
 
 	
@@ -915,8 +944,8 @@ local function BVAUE_fake_script() -- Basementdoor2.LocalScript
 	
 	
 end
-coroutine.wrap(BVAUE_fake_script)()
-local function IFRSCH_fake_script() -- CamRoom.LocalScript 
+coroutine.wrap(WILDW_fake_script)()
+local function BHGJPF_fake_script() -- CamRoom.LocalScript 
 	local script = Instance.new('LocalScript', CamRoom)
 
 	
@@ -929,4 +958,4 @@ local function IFRSCH_fake_script() -- CamRoom.LocalScript
 	
 	
 end
-coroutine.wrap(IFRSCH_fake_script)()
+coroutine.wrap(BHGJPF_fake_script)()
