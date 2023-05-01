@@ -27,7 +27,7 @@ local Archives = Instance.new("TextButton")
 --Properties:
 
 EPGUI.Name = "EPGUI"
-EPGUI.Parent = game:GetService("CoreGui"))
+EPGUI.Parent = game:GetService("CoreGui")
 EPGUI.ResetOnSpawn = false
 
 BlacksiteFrame.Name = "BlacksiteFrame"
