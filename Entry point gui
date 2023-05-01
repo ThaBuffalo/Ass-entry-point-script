@@ -1,31 +1,6 @@
--- Version 1.3 --
---[[
-Local ESP = false -- SET TO TRUE IF YOU WANT ESP
-if ESP == true then
-for i,v in pairs(game.Workspace.Level.Actors:GetChildren()) do
-print("ESP SUPPORT ENABLED:")
-local BillboardGui = Instance.new('BillboardGui')
-local TextLabel = Instance.new('TextLabel')
-
-BillboardGui.Parent = v.Character.HumanoidRootPart
-BillboardGui.AlwaysOnTop = true
-BillboardGui.Size = UDim2.new(0, 50, 0, 50)
-BillboardGui.StudsOffset = Vector3.new(0,2,0)
-BillboardGui.Name = "Esp"
-
-TextLabel.Parent = BillboardGui
-TextLabel.BackgroundColor3 = Color3.new(1,1,1)
-TextLabel.BackgroundTransparency = 1
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Text = "NPC"
-TextLabel.TextColor3 = Color3.new(1, 1, 1)
-TextLabel.TextScaled = true
-end
-elseif ESP == false then
-return
-end
---]]
+-- Version: 1.5
 -- Instances:
+
 local EPGUI = Instance.new("ScreenGui")
 local BlacksiteFrame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -47,11 +22,13 @@ local UpStairsCameras = Instance.new("TextButton")
 local Van = Instance.new("TextButton")
 local Archives = Instance.new("TextButton")
 local AccManager = Instance.new("TextButton")
+
 --Properties:
+
 EPGUI.Name = "EPGUI"
-EPGUI.Parent = game:GetService("CoreGui")
+EPGUI.Parent = game:GetService("CoreGui)
 EPGUI.ResetOnSpawn = false
---Extra
+
 BlacksiteFrame.Name = "BlacksiteFrame"
 BlacksiteFrame.Parent = EPGUI
 BlacksiteFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -301,7 +278,7 @@ AccManager.TextWrapped = true
 
 -- Scripts:
 
-local function TUNEPG_fake_script() -- ControlRoom.LocalScript 
+local function QNZCKW_fake_script() -- ControlRoom.LocalScript 
 	local script = Instance.new('LocalScript', ControlRoom)
 
 	
@@ -314,8 +291,8 @@ local function TUNEPG_fake_script() -- ControlRoom.LocalScript
 	
 	
 end
-coroutine.wrap(TUNEPG_fake_script)()
-local function FTTWTO_fake_script() -- CLOSE.LocalScript 
+coroutine.wrap(QNZCKW_fake_script)()
+local function VCPNOZV_fake_script() -- CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE)
 
 	script.Parent.Activated:Connect(function()
@@ -323,8 +300,8 @@ local function FTTWTO_fake_script() -- CLOSE.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(FTTWTO_fake_script)()
-local function MZUPPCO_fake_script() -- CargoCamera.LocalScript 
+coroutine.wrap(VCPNOZV_fake_script)()
+local function IUDRCW_fake_script() -- CargoCamera.LocalScript 
 	local script = Instance.new('LocalScript', CargoCamera)
 
 	
@@ -337,8 +314,8 @@ local function MZUPPCO_fake_script() -- CargoCamera.LocalScript
 	
 	
 end
-coroutine.wrap(MZUPPCO_fake_script)()
-local function YGUY_fake_script() -- Sewers.LocalScript 
+coroutine.wrap(IUDRCW_fake_script)()
+local function SQPFHX_fake_script() -- Sewers.LocalScript 
 	local script = Instance.new('LocalScript', Sewers)
 
 	
@@ -351,8 +328,8 @@ local function YGUY_fake_script() -- Sewers.LocalScript
 	
 	
 end
-coroutine.wrap(YGUY_fake_script)()
-local function IFED_fake_script() -- Blacksite.LocalScript 
+coroutine.wrap(SQPFHX_fake_script)()
+local function LWQS_fake_script() -- Blacksite.LocalScript 
 	local script = Instance.new('LocalScript', Blacksite)
 
 	script.Parent.Activated:Connect(function()
@@ -360,8 +337,8 @@ local function IFED_fake_script() -- Blacksite.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(IFED_fake_script)()
-local function LDDHPNZ_fake_script() -- Deposit.LocalScript 
+coroutine.wrap(LWQS_fake_script)()
+local function KCYA_fake_script() -- Deposit.LocalScript 
 	local script = Instance.new('LocalScript', Deposit)
 
 	script.Parent.Activated:Connect(function()
@@ -369,8 +346,8 @@ local function LDDHPNZ_fake_script() -- Deposit.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(LDDHPNZ_fake_script)()
-local function KZDXUHA_fake_script() -- DownStairsCameras.LocalScript 
+coroutine.wrap(KCYA_fake_script)()
+local function RDCN_fake_script() -- DownStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', DownStairsCameras)
 
 	
@@ -383,8 +360,8 @@ local function KZDXUHA_fake_script() -- DownStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(KZDXUHA_fake_script)()
-local function TIJIXG_fake_script() -- CLOSE_2.LocalScript 
+coroutine.wrap(RDCN_fake_script)()
+local function SLLTTGF_fake_script() -- CLOSE_2.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_2)
 
 	script.Parent.Activated:Connect(function()
@@ -392,8 +369,8 @@ local function TIJIXG_fake_script() -- CLOSE_2.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(TIJIXG_fake_script)()
-local function QAOFV_fake_script() -- ManagerPC.LocalScript 
+coroutine.wrap(SLLTTGF_fake_script)()
+local function TGUTS_fake_script() -- ManagerPC.LocalScript 
 	local script = Instance.new('LocalScript', ManagerPC)
 
 	
@@ -406,8 +383,8 @@ local function QAOFV_fake_script() -- ManagerPC.LocalScript
 	
 	
 end
-coroutine.wrap(QAOFV_fake_script)()
-local function ZPOER_fake_script() -- UpStairsCameras.LocalScript 
+coroutine.wrap(TGUTS_fake_script)()
+local function IJSBD_fake_script() -- UpStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', UpStairsCameras)
 
 	
@@ -420,8 +397,8 @@ local function ZPOER_fake_script() -- UpStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(ZPOER_fake_script)()
-local function BSGUTDP_fake_script() -- Van.LocalScript 
+coroutine.wrap(IJSBD_fake_script)()
+local function JRZOKQI_fake_script() -- Van.LocalScript 
 	local script = Instance.new('LocalScript', Van)
 
 	
@@ -434,8 +411,8 @@ local function BSGUTDP_fake_script() -- Van.LocalScript
 	
 	
 end
-coroutine.wrap(BSGUTDP_fake_script)()
-local function REMRBQD_fake_script() -- Archives.LocalScript 
+coroutine.wrap(JRZOKQI_fake_script)()
+local function NHPBSVD_fake_script() -- Archives.LocalScript 
 	local script = Instance.new('LocalScript', Archives)
 
 	
@@ -448,8 +425,8 @@ local function REMRBQD_fake_script() -- Archives.LocalScript
 	
 	
 end
-coroutine.wrap(REMRBQD_fake_script)()
-local function ISCFBKI_fake_script() -- AccManager.LocalScript 
+coroutine.wrap(NHPBSVD_fake_script)()
+local function EMZRZBX_fake_script() -- AccManager.LocalScript 
 	local script = Instance.new('LocalScript', AccManager)
 
 	
@@ -462,4 +439,4 @@ local function ISCFBKI_fake_script() -- AccManager.LocalScript
 	
 	
 end
-coroutine.wrap(ISCFBKI_fake_script)()
+coroutine.wrap(EMZRZBX_fake_script)()
