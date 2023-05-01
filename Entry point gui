@@ -1,4 +1,4 @@
--- Version: 2.1.69 (NOT YET 2.2 LOSERS)
+-- Version: 2.2
 local ESP = false -- set true for esp
 
 -- Esp credit goes to some script kiddy i found on the internet 
@@ -41,6 +41,7 @@ local Blacksite = Instance.new("TextButton")
 local Deposit = Instance.new("TextButton")
 local LakeHouse = Instance.new("TextButton")
 local Withdrawal = Instance.new("TextButton")
+local Scientist = Instance.new("TextButton")
 local DepositFrame = Instance.new("Frame")
 local TextLabel_2 = Instance.new("TextLabel")
 local DownStairsCameras = Instance.new("TextButton")
@@ -61,7 +62,6 @@ local Vdoor2 = Instance.new("TextButton")
 local ServerRoom = Instance.new("TextButton")
 local Basement = Instance.new("TextButton")
 local Van_2 = Instance.new("TextButton")
-local VdoorFront = Instance.new("TextButton")
 local LakeHouseFrame = Instance.new("Frame")
 local TextLabel_4 = Instance.new("TextLabel")
 local CLOSE_4 = Instance.new("TextButton")
@@ -69,6 +69,16 @@ local Powerbox = Instance.new("TextButton")
 local Basementdoor1 = Instance.new("TextButton")
 local Basementdoor2 = Instance.new("TextButton")
 local CamRoom = Instance.new("TextButton")
+local ScientistFrame = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local Basement_2 = Instance.new("TextButton")
+local CLOSE_5 = Instance.new("TextButton")
+local ToolLocation = Instance.new("TextButton")
+local Garrage = Instance.new("TextButton")
+local Backdoor = Instance.new("TextButton")
+local ServerRoomArch = Instance.new("TextButton")
+local KeycardESP = Instance.new("TextButton")
+local China = Instance.new("TextButton")
 
 --Properties:
 
@@ -214,6 +224,20 @@ Withdrawal.Text = "Withdrawal"
 Withdrawal.TextColor3 = Color3.fromRGB(255, 255, 255)
 Withdrawal.TextSize = 14.000
 Withdrawal.TextWrapped = true
+
+Scientist.Name = "Scientist"
+Scientist.Parent = MainGUI
+Scientist.BackgroundColor3 = Color3.fromRGB(170, 255, 255)
+Scientist.BackgroundTransparency = 0.750
+Scientist.BorderSizePixel = 0
+Scientist.Position = UDim2.new(0.0168067235, 0, 0.876780808, 0)
+Scientist.Size = UDim2.new(0, 173, 0, 51)
+Scientist.ZIndex = 99
+Scientist.Font = Enum.Font.SciFi
+Scientist.Text = "Scientist"
+Scientist.TextColor3 = Color3.fromRGB(255, 255, 255)
+Scientist.TextSize = 14.000
+Scientist.TextWrapped = true
 
 DepositFrame.Name = "DepositFrame"
 DepositFrame.Parent = EPGUI
@@ -478,20 +502,6 @@ Van_2.TextScaled = true
 Van_2.TextSize = 14.000
 Van_2.TextWrapped = true
 
-VdoorFront.Name = "VdoorFront"
-VdoorFront.Parent = WithdrawalFrame
-VdoorFront.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-VdoorFront.BackgroundTransparency = 1.000
-VdoorFront.BorderSizePixel = 0
-VdoorFront.Position = UDim2.new(0.0258620717, 0, 0.955204248, 0)
-VdoorFront.Size = UDim2.new(0, 200, 0, 50)
-VdoorFront.Font = Enum.Font.SciFi
-VdoorFront.Text = "VdoorFront"
-VdoorFront.TextColor3 = Color3.fromRGB(0, 0, 0)
-VdoorFront.TextScaled = true
-VdoorFront.TextSize = 14.000
-VdoorFront.TextWrapped = true
-
 LakeHouseFrame.Name = "LakeHouseFrame"
 LakeHouseFrame.Parent = EPGUI
 LakeHouseFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -582,9 +592,142 @@ CamRoom.TextScaled = true
 CamRoom.TextSize = 14.000
 CamRoom.TextWrapped = true
 
+ScientistFrame.Name = "ScientistFrame"
+ScientistFrame.Parent = EPGUI
+ScientistFrame.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+ScientistFrame.BackgroundTransparency = 0.300
+ScientistFrame.BorderSizePixel = 0
+ScientistFrame.Position = UDim2.new(0.723311901, 0, 0.176630437, 0)
+ScientistFrame.Size = UDim2.new(0, 232, 0, 386)
+ScientistFrame.Visible = false
+ScientistFrame.ZIndex = 0
+
+TextLabel_5.Parent = ScientistFrame
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0.056034483, 0, -0.00632911408, 0)
+TextLabel_5.Size = UDim2.new(0, 200, 0, 39)
+TextLabel_5.Font = Enum.Font.SciFi
+TextLabel_5.Text = "Scientist"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+Basement_2.Name = "Basement"
+Basement_2.Parent = ScientistFrame
+Basement_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Basement_2.BackgroundTransparency = 1.000
+Basement_2.BorderSizePixel = 0
+Basement_2.Position = UDim2.new(0.0560344867, 0, 0.133960754, 0)
+Basement_2.Size = UDim2.new(0, 200, 0, 50)
+Basement_2.Font = Enum.Font.SciFi
+Basement_2.Text = "BasementTPS"
+Basement_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Basement_2.TextScaled = true
+Basement_2.TextSize = 14.000
+Basement_2.TextWrapped = true
+
+CLOSE_5.Name = "CLOSE"
+CLOSE_5.Parent = ScientistFrame
+CLOSE_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CLOSE_5.BackgroundTransparency = 1.000
+CLOSE_5.Position = UDim2.new(-0.198275864, 0, 0.00259067398, 0)
+CLOSE_5.Size = UDim2.new(0, 46, 0, 50)
+CLOSE_5.Font = Enum.Font.SciFi
+CLOSE_5.Text = "Close"
+CLOSE_5.TextColor3 = Color3.fromRGB(255, 0, 0)
+CLOSE_5.TextScaled = true
+CLOSE_5.TextSize = 14.000
+CLOSE_5.TextWrapped = true
+
+ToolLocation.Name = "ToolLocation"
+ToolLocation.Parent = ScientistFrame
+ToolLocation.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ToolLocation.BackgroundTransparency = 1.000
+ToolLocation.BorderSizePixel = 0
+ToolLocation.Position = UDim2.new(-0.0172413792, 0, 0.851577282, 0)
+ToolLocation.Size = UDim2.new(0, 233, 0, 23)
+ToolLocation.Font = Enum.Font.SciFi
+ToolLocation.Text = "ToolLocation"
+ToolLocation.TextColor3 = Color3.fromRGB(0, 0, 0)
+ToolLocation.TextScaled = true
+ToolLocation.TextSize = 1.000
+ToolLocation.TextWrapped = true
+
+Garrage.Name = "Garrage"
+Garrage.Parent = ScientistFrame
+Garrage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Garrage.BackgroundTransparency = 1.000
+Garrage.BorderSizePixel = 0
+Garrage.Position = UDim2.new(0.0560344867, 0, 0.25831309, 0)
+Garrage.Size = UDim2.new(0, 200, 0, 50)
+Garrage.Font = Enum.Font.SciFi
+Garrage.Text = "Garage"
+Garrage.TextColor3 = Color3.fromRGB(0, 0, 0)
+Garrage.TextScaled = true
+Garrage.TextSize = 14.000
+Garrage.TextWrapped = true
+
+Backdoor.Name = "Backdoor"
+Backdoor.Parent = ScientistFrame
+Backdoor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Backdoor.BackgroundTransparency = 1.000
+Backdoor.BorderSizePixel = 0
+Backdoor.Position = UDim2.new(0.0560344867, 0, 0.382665426, 0)
+Backdoor.Size = UDim2.new(0, 200, 0, 50)
+Backdoor.Font = Enum.Font.SciFi
+Backdoor.Text = "Backdoor"
+Backdoor.TextColor3 = Color3.fromRGB(0, 0, 0)
+Backdoor.TextScaled = true
+Backdoor.TextSize = 14.000
+Backdoor.TextWrapped = true
+
+ServerRoomArch.Name = "ServerRoomArch"
+ServerRoomArch.Parent = ScientistFrame
+ServerRoomArch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ServerRoomArch.BackgroundTransparency = 1.000
+ServerRoomArch.BorderSizePixel = 0
+ServerRoomArch.Position = UDim2.new(0.0560344867, 0, 0.512199104, 0)
+ServerRoomArch.Size = UDim2.new(0, 200, 0, 50)
+ServerRoomArch.Font = Enum.Font.SciFi
+ServerRoomArch.Text = "ServRoom"
+ServerRoomArch.TextColor3 = Color3.fromRGB(0, 0, 0)
+ServerRoomArch.TextScaled = true
+ServerRoomArch.TextSize = 14.000
+ServerRoomArch.TextWrapped = true
+
+KeycardESP.Name = "KeycardESP"
+KeycardESP.Parent = ScientistFrame
+KeycardESP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeycardESP.BackgroundTransparency = 1.000
+KeycardESP.BorderSizePixel = 0
+KeycardESP.Position = UDim2.new(-0.0172413774, 0, 0.908572078, 0)
+KeycardESP.Size = UDim2.new(0, 239, 0, 38)
+KeycardESP.Font = Enum.Font.SciFi
+KeycardESP.Text = "KeycardESP(NPC)"
+KeycardESP.TextColor3 = Color3.fromRGB(0, 0, 0)
+KeycardESP.TextScaled = true
+KeycardESP.TextSize = 14.000
+KeycardESP.TextWrapped = true
+
+China.Name = "China"
+China.Parent = ScientistFrame
+China.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+China.BackgroundTransparency = 1.000
+China.BorderSizePixel = 0
+China.Position = UDim2.new(0.0689655244, 0, 0.646914124, 0)
+China.Size = UDim2.new(0, 200, 0, 50)
+China.Font = Enum.Font.SciFi
+China.Text = "China(safe zone)"
+China.TextColor3 = Color3.fromRGB(0, 0, 0)
+China.TextScaled = true
+China.TextSize = 14.000
+China.TextWrapped = true
+
 -- Scripts:
 
-local function MZNATM_fake_script() -- ControlRoom.LocalScript 
+local function YDQYM_fake_script() -- ControlRoom.LocalScript 
 	local script = Instance.new('LocalScript', ControlRoom)
 
 	
@@ -597,8 +740,8 @@ local function MZNATM_fake_script() -- ControlRoom.LocalScript
 	
 	
 end
-coroutine.wrap(MZNATM_fake_script)()
-local function CDBHXG_fake_script() -- CLOSE.LocalScript 
+coroutine.wrap(YDQYM_fake_script)()
+local function QCQYHV_fake_script() -- CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE)
 
 	script.Parent.Activated:Connect(function()
@@ -606,8 +749,8 @@ local function CDBHXG_fake_script() -- CLOSE.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(CDBHXG_fake_script)()
-local function KGND_fake_script() -- CargoCamera.LocalScript 
+coroutine.wrap(QCQYHV_fake_script)()
+local function WIHC_fake_script() -- CargoCamera.LocalScript 
 	local script = Instance.new('LocalScript', CargoCamera)
 
 	
@@ -620,8 +763,8 @@ local function KGND_fake_script() -- CargoCamera.LocalScript
 	
 	
 end
-coroutine.wrap(KGND_fake_script)()
-local function TXVLWK_fake_script() -- Sewers.LocalScript 
+coroutine.wrap(WIHC_fake_script)()
+local function BVCCTGE_fake_script() -- Sewers.LocalScript 
 	local script = Instance.new('LocalScript', Sewers)
 
 	
@@ -634,8 +777,8 @@ local function TXVLWK_fake_script() -- Sewers.LocalScript
 	
 	
 end
-coroutine.wrap(TXVLWK_fake_script)()
-local function FDHXF_fake_script() -- Blacksite.LocalScript 
+coroutine.wrap(BVCCTGE_fake_script)()
+local function AEHPMM_fake_script() -- Blacksite.LocalScript 
 	local script = Instance.new('LocalScript', Blacksite)
 
 	script.Parent.Activated:Connect(function()
@@ -643,8 +786,8 @@ local function FDHXF_fake_script() -- Blacksite.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(FDHXF_fake_script)()
-local function QTPLC_fake_script() -- Deposit.LocalScript 
+coroutine.wrap(AEHPMM_fake_script)()
+local function INUWXMU_fake_script() -- Deposit.LocalScript 
 	local script = Instance.new('LocalScript', Deposit)
 
 	script.Parent.Activated:Connect(function()
@@ -652,8 +795,8 @@ local function QTPLC_fake_script() -- Deposit.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(QTPLC_fake_script)()
-local function SIETIN_fake_script() -- LakeHouse.LocalScript 
+coroutine.wrap(INUWXMU_fake_script)()
+local function WUBI_fake_script() -- LakeHouse.LocalScript 
 	local script = Instance.new('LocalScript', LakeHouse)
 
 	script.Parent.Activated:Connect(function()
@@ -661,8 +804,8 @@ local function SIETIN_fake_script() -- LakeHouse.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(SIETIN_fake_script)()
-local function HBHAZMI_fake_script() -- Withdrawal.LocalScript 
+coroutine.wrap(WUBI_fake_script)()
+local function DWYJ_fake_script() -- Withdrawal.LocalScript 
 	local script = Instance.new('LocalScript', Withdrawal)
 
 	script.Parent.Activated:Connect(function()
@@ -670,8 +813,17 @@ local function HBHAZMI_fake_script() -- Withdrawal.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(HBHAZMI_fake_script)()
-local function PWHWX_fake_script() -- DownStairsCameras.LocalScript 
+coroutine.wrap(DWYJ_fake_script)()
+local function WMVZLYG_fake_script() -- Scientist.LocalScript 
+	local script = Instance.new('LocalScript', Scientist)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Parent.ScientistFrame.Visible = true
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(WMVZLYG_fake_script)()
+local function YFLPJ_fake_script() -- DownStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', DownStairsCameras)
 
 	
@@ -684,8 +836,8 @@ local function PWHWX_fake_script() -- DownStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(PWHWX_fake_script)()
-local function RFHBXO_fake_script() -- CLOSE_2.LocalScript 
+coroutine.wrap(YFLPJ_fake_script)()
+local function XMCMHY_fake_script() -- CLOSE_2.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_2)
 
 	script.Parent.Activated:Connect(function()
@@ -693,8 +845,8 @@ local function RFHBXO_fake_script() -- CLOSE_2.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(RFHBXO_fake_script)()
-local function LWGRECW_fake_script() -- ManagerPC.LocalScript 
+coroutine.wrap(XMCMHY_fake_script)()
+local function ATSCV_fake_script() -- ManagerPC.LocalScript 
 	local script = Instance.new('LocalScript', ManagerPC)
 
 	
@@ -707,8 +859,8 @@ local function LWGRECW_fake_script() -- ManagerPC.LocalScript
 	
 	
 end
-coroutine.wrap(LWGRECW_fake_script)()
-local function AIWRFW_fake_script() -- UpStairsCameras.LocalScript 
+coroutine.wrap(ATSCV_fake_script)()
+local function ULJOFKS_fake_script() -- UpStairsCameras.LocalScript 
 	local script = Instance.new('LocalScript', UpStairsCameras)
 
 	
@@ -721,8 +873,8 @@ local function AIWRFW_fake_script() -- UpStairsCameras.LocalScript
 	
 	
 end
-coroutine.wrap(AIWRFW_fake_script)()
-local function ZZOHP_fake_script() -- Van.LocalScript 
+coroutine.wrap(ULJOFKS_fake_script)()
+local function SREXXC_fake_script() -- Van.LocalScript 
 	local script = Instance.new('LocalScript', Van)
 
 	
@@ -735,8 +887,8 @@ local function ZZOHP_fake_script() -- Van.LocalScript
 	
 	
 end
-coroutine.wrap(ZZOHP_fake_script)()
-local function ATPHBPF_fake_script() -- AccManager.LocalScript 
+coroutine.wrap(SREXXC_fake_script)()
+local function JUJREYL_fake_script() -- AccManager.LocalScript 
 	local script = Instance.new('LocalScript', AccManager)
 
 	
@@ -749,8 +901,8 @@ local function ATPHBPF_fake_script() -- AccManager.LocalScript
 	
 	
 end
-coroutine.wrap(ATPHBPF_fake_script)()
-local function GZDZSB_fake_script() -- Archives.LocalScript 
+coroutine.wrap(JUJREYL_fake_script)()
+local function GEBR_fake_script() -- Archives.LocalScript 
 	local script = Instance.new('LocalScript', Archives)
 
 	
@@ -763,16 +915,16 @@ local function GZDZSB_fake_script() -- Archives.LocalScript
 	
 	
 end
-coroutine.wrap(GZDZSB_fake_script)()
-local function IFAJ_fake_script() -- REMOVESENSORS.LocalScript 
+coroutine.wrap(GEBR_fake_script)()
+local function CINJHP_fake_script() -- REMOVESENSORS.LocalScript 
 	local script = Instance.new('LocalScript', REMOVESENSORS)
 
 	script.Parent.Activated:Connect(function()
 	game.Level.Triggers.SensorZone:Destroy()
 	end)
 end
-coroutine.wrap(IFAJ_fake_script)()
-local function EDXOM_fake_script() -- CLOSE_3.LocalScript 
+coroutine.wrap(CINJHP_fake_script)()
+local function CSDDWPU_fake_script() -- CLOSE_3.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_3)
 
 	script.Parent.Activated:Connect(function()
@@ -780,8 +932,8 @@ local function EDXOM_fake_script() -- CLOSE_3.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(EDXOM_fake_script)()
-local function JZVERB_fake_script() -- Vdoor1.LocalScript 
+coroutine.wrap(CSDDWPU_fake_script)()
+local function ANXX_fake_script() -- Vdoor1.LocalScript 
 	local script = Instance.new('LocalScript', Vdoor1)
 
 	
@@ -794,8 +946,8 @@ local function JZVERB_fake_script() -- Vdoor1.LocalScript
 	
 	
 end
-coroutine.wrap(JZVERB_fake_script)()
-local function KFEM_fake_script() -- Vault.LocalScript 
+coroutine.wrap(ANXX_fake_script)()
+local function IAKU_fake_script() -- Vault.LocalScript 
 	local script = Instance.new('LocalScript', Vault)
 
 	
@@ -808,8 +960,8 @@ local function KFEM_fake_script() -- Vault.LocalScript
 	
 	
 end
-coroutine.wrap(KFEM_fake_script)()
-local function YHBBYP_fake_script() -- Cams.LocalScript 
+coroutine.wrap(IAKU_fake_script)()
+local function CFEXUCW_fake_script() -- Cams.LocalScript 
 	local script = Instance.new('LocalScript', Cams)
 
 	
@@ -822,8 +974,8 @@ local function YHBBYP_fake_script() -- Cams.LocalScript
 	
 	
 end
-coroutine.wrap(YHBBYP_fake_script)()
-local function DVKD_fake_script() -- Vdoor2.LocalScript 
+coroutine.wrap(CFEXUCW_fake_script)()
+local function FXQMP_fake_script() -- Vdoor2.LocalScript 
 	local script = Instance.new('LocalScript', Vdoor2)
 
 	
@@ -836,8 +988,8 @@ local function DVKD_fake_script() -- Vdoor2.LocalScript
 	
 	
 end
-coroutine.wrap(DVKD_fake_script)()
-local function MMET_fake_script() -- ServerRoom.LocalScript 
+coroutine.wrap(FXQMP_fake_script)()
+local function ZQZA_fake_script() -- ServerRoom.LocalScript 
 	local script = Instance.new('LocalScript', ServerRoom)
 
 	
@@ -851,8 +1003,8 @@ local function MMET_fake_script() -- ServerRoom.LocalScript
 	
 	
 end
-coroutine.wrap(MMET_fake_script)()
-local function VVTY_fake_script() -- Basement.LocalScript 
+coroutine.wrap(ZQZA_fake_script)()
+local function AMYP_fake_script() -- Basement.LocalScript 
 	local script = Instance.new('LocalScript', Basement)
 
 	
@@ -865,8 +1017,8 @@ local function VVTY_fake_script() -- Basement.LocalScript
 	
 	
 end
-coroutine.wrap(VVTY_fake_script)()
-local function QVDN_fake_script() -- Van_2.LocalScript 
+coroutine.wrap(AMYP_fake_script)()
+local function ALMR_fake_script() -- Van_2.LocalScript 
 	local script = Instance.new('LocalScript', Van_2)
 
 	
@@ -879,22 +1031,8 @@ local function QVDN_fake_script() -- Van_2.LocalScript
 	
 	
 end
-coroutine.wrap(QVDN_fake_script)()
-local function IXXX_fake_script() -- VdoorFront.LocalScript 
-	local script = Instance.new('LocalScript', VdoorFront)
-
-	
-	script.Parent.Activated:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-		wait(0.1)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(42.39, 1.6, 51.95)
-	end)
-		
-	
-	
-end
-coroutine.wrap(IXXX_fake_script)()
-local function RGTOB_fake_script() -- CLOSE_4.LocalScript 
+coroutine.wrap(ALMR_fake_script)()
+local function GJQR_fake_script() -- CLOSE_4.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE_4)
 
 	script.Parent.Activated:Connect(function()
@@ -902,8 +1040,8 @@ local function RGTOB_fake_script() -- CLOSE_4.LocalScript
 		script.Parent.Parent.Parent.MainGUI.Visible = true
 	end)
 end
-coroutine.wrap(RGTOB_fake_script)()
-local function EWEQZ_fake_script() -- Powerbox.LocalScript 
+coroutine.wrap(GJQR_fake_script)()
+local function ATQC_fake_script() -- Powerbox.LocalScript 
 	local script = Instance.new('LocalScript', Powerbox)
 
 	
@@ -916,8 +1054,8 @@ local function EWEQZ_fake_script() -- Powerbox.LocalScript
 	
 	
 end
-coroutine.wrap(EWEQZ_fake_script)()
-local function ENFHVG_fake_script() -- Basementdoor1.LocalScript 
+coroutine.wrap(ATQC_fake_script)()
+local function AGQJETK_fake_script() -- Basementdoor1.LocalScript 
 	local script = Instance.new('LocalScript', Basementdoor1)
 
 	
@@ -930,8 +1068,8 @@ local function ENFHVG_fake_script() -- Basementdoor1.LocalScript
 	
 	
 end
-coroutine.wrap(ENFHVG_fake_script)()
-local function WILDW_fake_script() -- Basementdoor2.LocalScript 
+coroutine.wrap(AGQJETK_fake_script)()
+local function XPJSELT_fake_script() -- Basementdoor2.LocalScript 
 	local script = Instance.new('LocalScript', Basementdoor2)
 
 	
@@ -944,8 +1082,8 @@ local function WILDW_fake_script() -- Basementdoor2.LocalScript
 	
 	
 end
-coroutine.wrap(WILDW_fake_script)()
-local function BHGJPF_fake_script() -- CamRoom.LocalScript 
+coroutine.wrap(XPJSELT_fake_script)()
+local function MAKIU_fake_script() -- CamRoom.LocalScript 
 	local script = Instance.new('LocalScript', CamRoom)
 
 	
@@ -958,4 +1096,144 @@ local function BHGJPF_fake_script() -- CamRoom.LocalScript
 	
 	
 end
-coroutine.wrap(BHGJPF_fake_script)()
+coroutine.wrap(MAKIU_fake_script)()
+local function YKIU_fake_script() -- Basement_2.LocalScript 
+	local script = Instance.new('LocalScript', Basement_2)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2.533, 1.5, 28.669)
+	end)
+		
+	
+	
+end
+coroutine.wrap(YKIU_fake_script)()
+local function XJMH_fake_script() -- CLOSE_5.LocalScript 
+	local script = Instance.new('LocalScript', CLOSE_5)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.MainGUI.Visible = true
+	end)
+end
+coroutine.wrap(XJMH_fake_script)()
+local function CIPOLS_fake_script() -- ToolLocation.LocalScript 
+	local script = Instance.new('LocalScript', ToolLocation)
+
+	
+	script.Parent.Activated:Connect(function()
+	--	game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	--	wait(0.1)
+	--	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Level.Geometry.PowerBox.Case.BasePart.CFrame
+		local samsung = Instance.new("BillboardGui")
+		local skype = Instance.new("BillboardGui")
+		local whatsapp = Instance.new("TextLabel")
+		local messenger = Instance.new("TextLabel")
+		samsung.Enabled = true
+		skype.Enabled = true
+		skype.AlwaysOnTop = true
+		samsung.AlwaysOnTop = true
+		samsung.Parent = game.Workspace.Level.GroundItems.Cutter.Base
+		skype.Parent = game.Workspace.Level.GroundItems.Screwdriver.Base
+		whatsapp.Parent = samsung
+		messenger.Parent = skype
+		whatsapp.Text = 'Cutter'
+		messenger.Text = 'Screwdriver'
+	end)
+		
+	
+	
+end
+coroutine.wrap(CIPOLS_fake_script)()
+local function OJMTNP_fake_script() -- Garrage.LocalScript 
+	local script = Instance.new('LocalScript', Garrage)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-66.098, 1.548, -49.058)
+	end)
+		
+	
+	
+end
+coroutine.wrap(OJMTNP_fake_script)()
+local function XQIQZ_fake_script() -- Backdoor.LocalScript 
+	local script = Instance.new('LocalScript', Backdoor)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(24.295, 2.9, 7.787)
+	end)
+		
+	
+	
+end
+coroutine.wrap(XQIQZ_fake_script)()
+local function HLFRMJ_fake_script() -- ServerRoomArch.LocalScript 
+	local script = Instance.new('LocalScript', ServerRoomArch)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.685, 15.1, 16.232)
+	end)
+		
+	
+	
+end
+coroutine.wrap(HLFRMJ_fake_script)()
+local function ZVTED_fake_script() -- KeycardESP.LocalScript 
+	local script = Instance.new('LocalScript', KeycardESP)
+
+	
+	script.Parent.Activated:Connect(function()
+		for i,v in pairs(game.Workspace.Level.Actors:GetChildren()) do
+			if v.Character.HumanoidRootPart and v.Character.Inventory.KeycardHS then
+					print("else")
+				else
+					local BillboardGui = Instance.new('BillboardGui')
+					local TextLabel = Instance.new('TextLabel')
+	
+					BillboardGui.Parent = v.Character.HumanoidRootPart
+					BillboardGui.AlwaysOnTop = true
+					BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+					BillboardGui.StudsOffset = Vector3.new(0,2,0)
+					BillboardGui.Name = "ACTORS"
+	
+					TextLabel.Parent = BillboardGui
+					TextLabel.BackgroundColor3 = Color3.new(1,1,1)
+					TextLabel.BackgroundTransparency = 1
+					TextLabel.Size = UDim2.new(1, 0, 1, 0)
+					TextLabel.Text = "KEYCARD"
+					TextLabel.TextColor3 = Color3.new(1, 1, 1)
+					TextLabel.TextScaled = true
+			end
+		end
+	end)
+		
+	
+	
+end
+coroutine.wrap(ZVTED_fake_script)()
+local function LRWJI_fake_script() -- China.LocalScript 
+	local script = Instance.new('LocalScript', China)
+
+	
+	script.Parent.Activated:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11.012, -8.4, 26.534)
+	end)
+		
+	
+	
+end
+coroutine.wrap(LRWJI_fake_script)()
